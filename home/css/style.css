@@ -6,7 +6,7 @@
  
       
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@500;600&display=swap");
-
+/* Header */
 .site-header {
   border-bottom: 1px solid #eee;
   font-family: "Inter", system-ui, sans-serif;
@@ -87,7 +87,7 @@
 
    
 
-
+/* hero */
 
 .hero-nav{
   background: linear-gradient(to bottom, #000000,#afafaf8b );
@@ -106,14 +106,26 @@
   color: black;
 }
 
-/* footer a{
-  color: inherit;
-} */
+
 
 body{
   height: 3000px;
 }
 
+
+
+
+
+
+/* footer */
+
+.footer-logo,
+.footer-logo:hover {
+  color: #fff;
+}
+.footer-logo .logo-dot {
+  border-color: #fff;
+}
 
 
 /* ///////////////ahmed-home//////////////// */

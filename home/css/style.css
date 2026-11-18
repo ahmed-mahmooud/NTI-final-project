@@ -16,100 +16,68 @@
 
 
 
-.hh {
-
-  border: 1px solid black;
-  background-color: white;
-}
-
-.hh:hover {
-  background-color: black;
-  color: white;
-}
-
-.hov {
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-}
-
-
-.wh {
+.left-padd{
   padding-left: 20%;
-  color: white;
 }
 
-.hi {
+.color-bordar{
   height: 460px;
   border: 6px solid powderblue;
 }
 
-.bo {
-  border: 1px solid blue;
-  background-color: blue;
-}
 
-.pi {
-  padding-left: 20%;
-}
-
-.hig {
+.width-card {
   height: 140px;
 
 }
-
-.w {
-  color: white;
-  padding-left: 8%;
-}
-
-.st {
-  padding-left: 8%;
-  color: gold;
-}
-
-.ws {
+.paadi-left {
   padding-left: 37%;
 }
 
-.e5 {
-  margin-right: 17%;
+
+.star-colo {
+  color: gold;
 }
 
-.hear {
+
+
+.margin-right {
+  margin-right: 6%;
+}
+
+.width {
+  width: 270px;
+}
+
+.heart {
   width: 40px;
   height: 40px;
   margin-left: 80%;
   margin-top: 6%;
 }
 
-.bov {
-  color: blue;
-}
-
-.bogr {
+.borde-gray {
   border: 1px solid gray;
   border-radius: 45%;
   background-color: rgb(214, 207, 207);
 }
 
-.widt {
-  width: 270px;
-}
-
-.www {
-  /* width: 80%; */
+.background {
   margin-right: 5%;
-
+  background-color: gainsboro;
 }
+
 
 .gray {
   background-color: gainsboro;
-  /* width: 90%; */
   margin-right: 5%;
 }
 
-.to {
+.box-shado {
+  box-shadow: -8px 4px 0px blue;
+}
+
+.box-blue{
   top: 20px;
   left: -200px;
   width: 60px;
@@ -117,15 +85,7 @@
   box-shadow: -8px 4px 0px blue;
 }
 
-.bo {
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: -150px;
-  box-shadow: -8px 4px 0px yellow;
-}
-
-.ta {
+.box-pink {
   width: 60px;
   height: 60px;
   top: 20px;
@@ -134,7 +94,17 @@
 
 }
 
-.sa {
+.box-yellow {
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: -150px;
+  box-shadow: -8px 4px 0px yellow;
+}
+
+
+
+.box-peru {
   width: 60px;
   height: 60px;
   bottom: 90px;
@@ -142,7 +112,7 @@
   box-shadow: -8px 4px 0px peru;
 }
 
-.ba {
+.box-green {
   bottom: 50px;
   left: -250px;
   width: 60px;
@@ -150,17 +120,11 @@
   box-shadow: -8px 4px 0px palegreen;
 }
 
-.tn {
-  box-shadow: -8px 4px 0px blue;
-}
 
-.back {
-  /* width: 80%; */
-  margin-right: 5%;
-  background-color: gainsboro;
-}
 
-.colo {
+
+
+.color-blue {
   color: blue;
 }
 

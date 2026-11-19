@@ -7,8 +7,950 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@500;600&display=swap");
+
+.site-header {
+  border-bottom: 1px solid #eee;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Logo */
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: #0b5cff;
+}
+
+.logo:hover {
+  color: #0b5cff;
+}
+
+.logo-dot {
+  width: 0.95em;
+  height: 0.95em;
+  margin-left: 0.05em;
+  border: 0.26em solid #ffc82c;
+  border-radius: 50%;
+  vertical-align: -0.1em;
+}
+
+/* Language / currency */
+.lang-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.lang-btn:hover {
+  color: #0b5cff;
+}
+
+/* Support icon */
+.support-btn {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: #0b5cff;
+}
+
+.support-btn:hover {
+  color: #0848cc;
+}
+
+/* Login */
+.btn-login {
+  padding: 0.55rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: #0b5cff;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  color: #fff;
+  background: #0848cc;
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .logo {
+    font-size: 1.55rem;
+  }
+
+  .btn-login {
+    padding: 0.45rem 1.1rem;
+  }
+}
+
+    </style>
 </head>
 <body>
+    <header class="site-header bg-white">
+  <div class="container-xl d-flex align-items-center justify-content-between py-3">
+
+    <!-- Logo -->
+    <a href="/" class="logo text-decoration-none" aria-label="Tripto home">
+      tripto<span class="logo-dot d-inline-block"></span>
+    </a>
+
+    <!-- Actions -->
+    <div class="d-flex align-items-center gap-2 gap-sm-3">
+
+      <button type="button" class="lang-btn btn btn-link d-flex align-items-center gap-2 text-decoration-none p-1"
+              data-bs-toggle="modal" data-bs-target="#languageModal">
+        <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20" class="rounded-circle object-fit-cover">
+        <span>USD</span>
+      </button>
+
+      <button type="button" class="support-btn btn btn-link p-1" aria-label="Customer support">
+        <i class="bi bi-headset"></i>
+      </button>
+
+      <button type="button" class="btn-login btn"
+              data-bs-toggle="modal" data-bs-target="#loginModal">
+        Login
+      </button>
+    </div>
+
+  </div>
+</header>
+    <section class="container">
+        <div class="d-flex justify-content-between align-itmes-center mt-5">
+            <div>
+                <h2>Entire rental unit in Versailles</h2>
+                <p>Barcelona,Spain</p>
+            </div>
+            <div class="d-flex gap-5"> 
+                  <button class="btn border rounded-circle p-2 d-flex bg-white width-button" >
+            <i class="far fa-heart text-dark"></i>
+        </button>
+       <button class="btn border rounded-circle p-2 d-flex bg-white width-button" >
+            <i class="fas fa-share-alt text-dark"></i>
+        </button>
+     
+
+            </div>
+
+        </div>
+        <div>
+            <ul class="nav gap-4 border-bottom" >
+            <li><a href="#overview" class="">Overview</a></li>
+            <li><a href="#amenities" class="fg-black text-decoration-none">Amenities</a></li>
+            <li><a href="#location" class="fg-black text-decoration-none">Location</a></li>
+            <li><a href="#calendar" class="fg-black text-decoration-none">Calendar</a></li>
+            <li><a href="#reviews" class="fg-black text-decoration-none">Reviews</a></li>
+        </ul>
+        </div>
+<div class="d-flex gap-5 mb-5 height mt-5">
+    
+
+    <div class="position-relative overflow-hidden rounded-5 w-50 " >
+        <img class="w-100 h-100" src="img/231d5027b6d4f411d7fa146c294aa2d6cedb8681.jpg" alt="1">
+        
+        <div class="position-absolute bottom-0 start-0 m-3 bg-white rounded-5 p-2 pe-3 d-flex gap-3 " >
+            <img class=" cricle-photo" src="img/4a20c9902674e0ca0c7eefed1477687623ca2246.jpg" alt="2" >
+            <div>
+                <small >Host</small>
+                <h5 >Selena Doberman</h5>
+            </div>
+            <i class="fas fa-chevron-down text-muted ms-2"></i>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column gap-3 w-50">
+        
+        <div class="d-flex gap-4 h-50">
+            <div class=" overflow-hidden rounded-5 ">
+                <img class=" width-photos" src="img/1856a280d4f8d8a65c00909456b508c9b4146724.jpg" alt="" >
+            </div>
+            <div class=" overflow-hidden rounded-5">
+                <img class="width-photos" src="img/6dab9b36e541d24f68d469592f052f13c9a7c4a2.jpg" alt="" >
+            </div>
+        </div>
+
+        <div class="d-flex gap-4 h-50">
+            <div class="overflow-hidden rounded-5 mt-2">
+                <img class="width-photos " src="img/7acf9d280857dae969516a8b9d17fbb106d77bc7.jpg" alt="">
+            </div>
+            <div class="position-relative overflow-hidden rounded-5 mt-2">
+                <img class="width-photos" src="img/cd14b1f39a85c07cfc2c943ee8458c3c8231c94a.jpg" alt="">
+                
+                <button class="position-absolute bottom-0 end-0 m-2 btn rounded-5 d-flex gap-1 bg-black fg-white">
+                    <i class="far fa-images"></i> 10+
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="d-flex gap-5 mt-5 align-items-start">
+    
+    <div>
+        
+        <div class="mb-5">
+            <h3>Description</h3>
+            <p>2 guests · Studio · 1 bed · 1.5 bath</p>
+            <p>Welcome to my fully refurbished 17 m² studio, ideally located in Versailles, only a 10-minute walk 
+                <br>to the Palace of Versailles and a 5-minute walk to the Rive Gauche train station
+                <br>. It consists of a living room open to a fully equipped kitchen (dishwasher, microwave, Nespresso machi)
+            </p>
+            <button class="btn border-primary bg-white fg-primary rounded-pill"> Show More </button>
+        </div>
+
+        <div class="mb-5">
+            <h3>Amenities</h3>
+            
+            <div class="d-flex gap mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-utensils fs-4"></i>
+                    <span>Kitchen</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-wifi fs-4"></i>
+                    <span>Free Wireless Internet</span>
+                </div>
+            </div>
+
+            <div class="d-flex gap-12 mt-7 mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-tshirt fs-4"></i>
+                    <span>Washing Machine</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-swimmer fs-4"></i>
+                    <span>Pool</span>
+                </div>
+            </div>
+
+            <div class="d-flex gap mt-7 mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-tv fs-4"></i>
+                    <span>Television</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-fire fs-4"></i>
+                    <span>Barbecue</span>
+                </div>
+            </div>
+            
+            <p class=" rounded-5 border w-25 p-2 mt-9 border-primary fg-primary">Show All 10 Amenities</p>
+        </div>
+
+    </div>
+
+    <div class="box">
+        <div class="card border rounded-5 p-4 ">
+
+            <div class="border rounded-5 mb-3">
+                <div class="row g-0 border-bottom">
+                    <div class="col-6 p-3 border-end">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Check-in</span>
+                        <span>07/16/2025</span>
+                    </div>
+                    <div class="col-6 p-3">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Check-out</span>
+                        <span>07/24/2025</span>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h5>Guests</h5>
+                    <span>2 adults</span>
+                </div>
+            </div>
+         
+            
+            <div class="rounded-5">
+                 <h5>Details:</h5>
+                <p>Capacity: 10 Persons</p>
+                <p>For 5 persons (per night):100$</p>
+                <p>For each additional person:10$</p>
+                
+            </div>
+
+          <hr class="Reserve" >
+            <div class="d-flex justify-content-between ">
+                <p>Total Price:</p>
+                <p>$500</p>
+            </div>
+            <button class="bg-primary fg-white btn rounded-5 ">Reserve</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<div>
+    <h3>Location</h3>
+    
+    <div>
+        <iframe class="map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47939.673752538965!2d2.1399965!3d41.3879004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona%2C%20Spain!5e0!3m2!1sen!2seg!4v1650000000000!5m2!1sen!2seg"
+            width="55%" 
+            height="370px">
+        </iframe>
+    </div>
+    
+</div>
+
+    <div>
+        <h3 class="mt-5">Calendar</h3>
+        <div class="row g-0 ">
+            <div class="col-5">
+                  <img class="w-75 border rounded-5" src="img/WhatsApp Image 2026-11-17 at 5.54.00 PM.jpeg" alt="">
+  
+            </div>
+            <div class="col-5">
+                <img class="w-75 border rounded-5" src="img/WhatsApp Image 2026-11-17 at 6.08.29 PM.jpeg" alt="">
+            </div>
+        </div>
+        
+     
+    </div>
+
+
+
+    <div>
+        <h3 class="mt-5">Reviews</h3>
+        <div class="d-flex align-items-center gap-3">
+            <span class="border rounded-4 bg-secondary fg-primary">5.0</span>
+            <span class="fg-primary">Excellent</span>
+            <span>1,260 reviews </span>
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-2">
+            <h4>Overall Rating</h4>
+        <div class="d-flex gap-3 align-items-center">
+            <span>5</span>
+            <div class="progress w-100 height-line ">
+                <div class="progress-blak bg-black w-75"></div>
+
+            </div>
+        </div>
+   <div class="d-flex gap-3 align-items-center">
+            <span>4</span>
+            <div class="progress w-100 height-line ">
+                <div class="progress-blak bg-black w-75"></div>
+
+            </div>
+        </div>
+ <div class="d-flex gap-3 align-items-center">
+            <span>3</span>
+            <div class="progress w-100 height-line ">
+                <div class="progress-blak bg-black w-1"></div>
+
+            </div>
+        </div>
+ <div class="d-flex gap-3 align-items-center">
+            <span>2</span>
+            <div class="progress w-100 height-line ">
+                <div class="progress-blak bg-black w-1"></div>
+
+            </div>
+        </div>
+ <div class="d-flex gap-3 align-items-center">
+            <span>1</span>
+            <div class="progress w-100 height-line ">
+                   </div>
+        </div>
+
+        
+
+        </div>
+
+<div class="col-2 border-start text-center ">
+    <div class="mx-auto mt-5 ">
+        <i class="fas fa-home"></i>
+        <span>Amenities</span>
+         <p class="mt-4">5.0</p>
+    </div>
+</div>
+<div class="col-2 border-start text-center ">
+    <div class="mx-auto mt-5 ">
+        <i class="fas fa-spray-can"></i>
+        <span>Cleanliness</span>
+         <p class="mt-4">5.0</p>
+    </div>
+</div>
+<div class="col-2 border-start text-center ">
+    <div class="mx-auto mt-5 ">
+        <i class="fas fa-comment-dots"></i>
+        <span>Communication</span>
+         <p class="mt-4">5.0</p>
+    </div>
+</div>
+<div class="col-2 border-start text-center ">
+    <div class="mx-auto mt-5 ">
+        <i class="fas fa-compass"></i>
+        <span>Location</span>
+         <p class="mt-4">5.0</p>
+    </div>
+</div>
+<div class="col-2 border-start text-center ">
+    <div class="mx-auto mt-5 ">
+        <i class="fas fa-dollar-sign"></i>
+        <span>Value</span>
+         <p class="mt-4">5.0</p>
+    </div>
+</div>
+<div class="row g-4 ">
+   <div class="col-4 ">
+    <div class="border rounded-5 mt-5  ">
+ <div class="d-flex gap-5 mt-4">
+     <img class="cricle-photo ms-2 mt-4" src="img/13431357d1165da766da7aa7b26000f250cd4814.jpg" alt="">
+
+    <div>
+        <p class=" m-0">July Kaly</p>
+        <p>12 Mar 2025</p>
+    </div> 
+    <div class="ms-auto">
+        <p class="bg-secondary rounded-3 mt-5 me-5">5.0</p>
+    </div>
+</div>
+   <div class="ms-2">
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita,
+         dignissimos hic libero non odio aperiam asperiores perspiciatis dicta, aliquam, doloribus 
+        ad quae facere harum ve...</P>
+   </div>
+   <div class="d-flex justify-content-end">
+    <p class="me-5">Show More</p>
+   </div>
+
+   </div>
+    </div>
+   
+   <div class="col-4 ">
+    <div class="border rounded-5 mt-5  ">
+ <div class="d-flex gap-5 mt-4">
+     <img class="cricle-photo ms-2 mt-4" src="img/13431357d1165da766da7aa7b26000f250cd4814.jpg" alt="">
+
+    <div>
+        <p class=" m-0">July Kaly</p>
+        <p>12 Mar 2025</p>
+    </div> 
+    <div class="ms-auto">
+        <p class="bg-secondary rounded-3 mt-5 me-5">5.0</p>
+    </div>
+</div>
+   <div class="ms-2">
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita,
+         dignissimos hic libero non odio aperiam asperiores perspiciatis dicta, aliquam, doloribus 
+        ad quae facere harum ve...</P>
+   </div>
+   <div class="d-flex justify-content-end">
+    <p class="me-5">Show More</p>
+   </div>
+
+   </div>
+    </div>
+    
+       <div class="col-4 ">
+    <div class="border rounded-5 mt-5  ">
+ <div class="d-flex gap-5 mt-4">
+     <img class="cricle-photo ms-2 mt-4" src="img/13431357d1165da766da7aa7b26000f250cd4814.jpg" alt="">
+
+    <div>
+        <p class=" m-0">July Kaly</p>
+        <p>12 Mar 2025</p>
+    </div> 
+    <div class="ms-auto">
+        <p class="bg-secondary rounded-3 mt-5 me-5">5.0</p>
+    </div>
+</div>
+   <div class="ms-2">
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita,
+         dignissimos hic libero non odio aperiam asperiores perspiciatis dicta, aliquam, doloribus 
+        ad quae facere harum ve...</P>
+   </div>
+   <div class="d-flex justify-content-end">
+    <p class="me-5">Show More</p>
+   </div>
+
+   </div>
+    </div>
+ 
+</div>
+<div >
+  
+        <p class="colr rounded-5 border w-12 p-2 mt-9 border-primary fg-primary">Show All 100 Reviews</p>
+   
+</div>
+    </div>
+
+
+
+    <div>
+        <h3>Policies</h3>
+        <p>Lazur Hotel Apartments  takes special requests - add in the next step!</p>
+        <div class="border rounded-5 ">
+            <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <h5>Check-in</h5>
+
+                </div>
+                <div class="me-12">
+                    <p>From 15:00 to 18:00<br>
+You’ll need to let the property know in advance what time you’ll arrive.</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <h5>Check-out</h5>
+
+                </div>
+                <div class="me-12">
+                    <p>From 8:00 to 11:00</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-regular fa-file-circle-xmark"></i>
+                    <h5>Cancellation/prepayment</h5>
+
+                </div>
+                <div class="me-12">
+                    <p>Cancellation and prepayment policies vary according to accommodation type.Pleas check what condition may
+                        <br> apply to each option when making your selection.</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-solid fa-children"></i>
+                    <h5>Children and beds</h5>
+
+                </div>
+                <div class="me-12">
+                    <p>Child policies: children of any age are welcome. To see correct prices and occupancy  information, please add 
+                        <br>the number of children in your group and their ages to your search. Cot and extra
+                        <br> bed policies: Cots and extra beds are not available at this property.</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-regular fa-user"></i>
+                    <h5>No age restriction</h5>
+
+                </div>
+                <div class="me-12 ">
+                    <p>Guests of all ages are welcome.</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-regular fa-moon"></i>
+                    <h5>Quiet hours</h5>
+
+                </div>
+                <div class="me-12 margin-text">
+                    <p>Guests must be quiet between 22:00 and 10:00.</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-solid fa-smoking-ban"></i>
+                    <h5>Smoking</h5>
+
+                </div>
+                <div class="me-12 margin-text ">
+                    <p>Smiking not allowed.</p>
+                </div>
+
+            </div>
+              <div class="d-flex justify-content-between border-bottom ">
+                <div class="d-flex gap-3 mt-3 ms-6">
+                    <i class="fa-solid fa-paw"></i>
+                    <h5>Pets</h5>
+
+                </div>
+                <div class="me-12 margin-text ">
+                    <p>Pets are not allowed.</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </section>
+    <section class="container bg-secondary ">
+        <div class="ms-5">
+<h3>12 Most Popular Things to Do Nearby</h3>
+        </div>
+               
+
+        <div class="row g-4">
+            <div class="col-3">
+                <div class="card overflow-hidden">
+                    <div class="position-relative">
+                        <img class=" rounded-5 object-fit-cover w-100 " src="img/e1bf8e088ad55a490de74fafa8abbcc7aeb5b553.jpg" alt="">
+                           <button class=" btn border rounded-circle top-50 start-0  position-absolute">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                            <span class="position-absolute top-0 start-0 border-2 rounded-5 m-3 px-3 bg-white border-primary fg-accent">
+                              <i class="fas fa-landmark  me-1"></i>   Explore</span>
+                              <span class="position-absolute top-0 end-0 border-2 rounded-5 m-3 px-3 bg-white  fg-black">600 m away</span>
+                              
+                        </div>
+
+                </div>
+                <div>
+                    <h4 class="ms-2 mt-3">Sagrada Familia Tour	</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Per Person</span>
+                        <div>
+                          <span class="text-decoration-line-through">$50</span>  
+                          <span class="fw-bold">$42</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+             <div class="col-3">
+                <div class="card overflow-hidden">
+                    <div class="position-relative">
+                        <img class=" rounded-5 object-fit-cover w-100 " src="img/217410a3483fde8a073c9ee7cfac310fef9d061b.jpg" alt="">
+                              <span class="position-absolute top-0 start-0 border-2 rounded-5 m-3 px-3 bg-white border-primary fg-accent">
+                              <i class="fa-solid fa-masks-theater  me-1"></i>   Show</span>
+                              <span class="position-absolute top-0 end-0 border-2 rounded-5 m-3 px-3 bg-white  fg-black">800 m away</span>
+                              
+                        </div>
+
+                </div>
+                <div>
+                    <h4 class="ms-2 mt-3">Flamenco Show		</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Per Person</span>
+                        <div> 
+                          <span class="fw-bold">$35</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+ <div class="col-3">
+                <div class="card overflow-hidden">
+                    <div class="position-relative">
+                        <img class=" rounded-5 object-fit-cover w-100 " src="img/e1bf8e088ad55a490de74fafa8abbcc7aeb5b553.jpg" alt="">
+
+                            <span class="position-absolute top-0 start-0 border-2 rounded-5 m-3 px-3 bg-white border-primary fg-accent">
+                              <i class=" fa-solid fa-building-columns me-1"></i>   museum</span>
+                              <span class="position-absolute top-0 end-0 border-2 rounded-5 m-3 px-3 bg-white  fg-black">1.3 km away</span>
+                              
+                        </div>
+
+                </div>
+                <div>
+                    <h4 class="ms-2 mt-3">Palau de la Música Tour	</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Per Person</span>
+                        <div>
+                          <span class="text-decoration-line-through">$59</span>  
+                          <span class="fw-bold">$45</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+ <div class="col-3">
+                <div class="card overflow-hidden">
+                    <div class="position-relative">
+                        <img class=" rounded-5 object-fit-cover w-100 " src="img/4523f82569f86600d34203e95d1dd63662be2493.jpg" alt="">
+                
+                 <button class="btn border rounded-circle d-flex position-absolute end-0 top-50">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                            <span class="position-absolute top-0 start-0 border-2 rounded-5 m-3 px-3 bg-white border-primary fg-accent">
+                              <i class="fa-solid fa-utensils  me-1"></i> Food</span>
+                              <span class="position-absolute top-0 end-0 border-2 rounded-5 m-3 px-3 bg-white  fg-black">600 m away</span>
+                              
+                        </div>
+
+                </div>
+                <div>
+                    <h4 class="ms-2 mt-3">Tapas & Wine Tasting	</h4>
+                    <div class="d-flex justify-content-between">
+                        <span>Per Person</span>
+                        <div> 
+                          <span class="fw-bold">$39</span>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="container mt-5">
+        <div class="d-flex justify-content-between mb-5">
+            <h3>Similar Apartments in Barcelona</h3>
+            <div class="d-flex gap-4">
+                 <button class="btn border rounded-circle ">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+               <button class="btn border rounded-circle ">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                  
+            </div>
+             
+
+        </div>
+        <div class="row g-4">
+            <div class="col-3">
+                <div class=" border rounded-5">
+             <div>
+                    <img class="rounded-5 width-img object-fit-cover" src="img/161664a284c8c8a9f30b179ab92d998f9c206b7a.jpg" alt="">
+                </div>
+               <div>
+                <h4 class="mt-3 mx-5">Casa Sol Apartment</h4>
+                <p class="mx-5"> <i class="fas fa-map-marker-alt"></i>Barcelona, Spain</p>
+                <p class="border rounded-4 bg-secondary py-2 px-5 m-2">Sunny terrace is a guest favorite.</p>
+                <p><i class="fas fa-tshirt mx-5"></i>Washing Machine</p>
+                <p><i class="fas fa-wifi mx-5"></i>Free Wi-Fi</p>
+                <p><i class="fas fa-umbrella-beach mx-5"></i> Private Balcony</p>
+            </div> 
+              <div class="d-flex gap-2 mx-5">
+                    <span class="border rounded-5 bg-secondary fg-primary px-1">4.5</span>
+                    <span class="fg-primary">very good</span>
+                    <span>140 reviews </span>
+
+                </div>
+                <div class="text-end">
+                    <p class="me-5">$310 nightly</p>
+                     <span class="text-decoration-line-through">$1,070</span>  
+                          <span class="fw-bold me-5">$856 total</span>
+                </div>
+                </div>
+             
+        
+            </div>
+                     <div class="col-3">
+                <div class=" border rounded-5">
+             <div>
+                    <img class="rounded-5 width-img object-fit-cover" src="img/7187963f29dd8b233bc02899530d4929ce207558.jpg" alt="">
+                </div>
+               <div>
+                <h4 class="mt-3 mx-5">La Rambla Suites</h4>
+                <p class="mx-5"> <i class="fas fa-map-marker-alt"></i>Barcelona, Spain</p>
+                <p class="border rounded-4 bg-secondary py-2 px-5 m-2">Located steps away from La Rambla.</p>
+                <p><i class="fas fa-fire-burner mx-5"></i> Kitchen</p>
+                <p><i class="fas fa-couch mx-5"></i>Living Area</p>
+                <p><i class="fas fa-snowflake mx-5"></i> Air Conditioner</p>
+            </div> 
+              <div class="d-flex gap-2 mx-5">
+                    <span class="border rounded-5 bg-secondary fg-primary px-1">3.8</span>
+                    <span class="fg-primary">Good</span>
+                    <span>125 reviews </span>
+
+                </div>
+                <div class="text-end">
+                    <p class="me-5">$298 nightly</p>
+                     <span class="text-decoration-line-through">$1,050</span>  
+                          <span class="fw-bold me-5">$840 total</span>
+                </div>
+                </div>
+             
+        
+            </div>
+                     <div class="col-3">
+                <div class=" border rounded-5">
+             <div>
+                    <img class="rounded-5 width-img object-fit-cover" src="img/c27b17a73e2ebc1b544a8a3b27b0fab6d3b8845e.png" alt="">
+                </div>
+               <div>
+                <h4 class="mt-3 mx-5">Borne Vintage Loft</h4>
+                <p class="mx-5"> <i class="fas fa-map-marker-alt"></i>Barcelona, Spain</p>
+                <p class="border rounded-4 bg-secondary py-2 px-5 m-2">Charming and full of character.</p>
+                <p><i class="fas fa-key mx-5"></i>Self Check-in</p>
+                <p><i class="fas fa-fire mx-5"></i>Barbecue</p>
+                <p><i class="fas fa-wifi mx-5"></i> Free Wi-Fi</p>
+            </div> 
+              <div class="d-flex gap-2 mx-5">
+                    <span class="border rounded-5 bg-secondary fg-primary px-1">4.2</span>
+                    <span class="fg-primary">very good</span>
+                    <span>110 reviews  </span>
+
+                </div>
+                <div class="text-end">
+                    <p class="me-5">$289 nightly</p>
+                     <span class="text-decoration-line-through">$990</span>  
+                          <span class="fw-bold me-5">$792 total</span>
+                </div>
+                </div>
+             
+        
+            </div>
+                     <div class="col-3">
+                <div class=" border rounded-5">
+             <div>
+                    <img class="rounded-5 width-img object-fit-cover" src="img/f67cb7f052c7f3bf308f13e14aa80f644755d1fd.jpg" alt="">
+                </div>
+               <div>
+                <h4 class="mt-3 mx-5">Eixample Designer Flat</h4>
+                <p class="mx-5"> <i class="fas fa-map-marker-alt"></i>Barcelona, Spain</p>
+                <p class="border rounded-4 bg-secondary py-2 px-5 m-2">Loved for its modern design.</p>
+                <p><i class="fas fa-key mx-5"></i>Self Check-in</p>
+                <p><i class="fas fa-hot-tub mx-5"></i>Hot Tub</p>
+                <p><i class="fas fa-parking mx-5"></i> Paid Parking</p>
+            </div> 
+              <div class="d-flex gap-2 mx-5">
+                    <span class="border rounded-5 bg-secondary fg-primary px-1">4.9</span>
+                    <span class="fg-primary">very good</span>
+                    <span>95 reviews  </span>
+
+                </div>
+                <div class="text-end">
+                    <p class="me-5">$325 nightly</p>
+                     <span class="text-decoration-line-through">$1,180</span>  
+                          <span class="fw-bold me-5">$944 total</span>
+                </div>
+                </div>
+             
+        
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="bg-black fg-white pt-12 pb-7 col-12 md:col-12">
+  <div class="container">
+
+    <div class="row gy-7">
+
+      <!-- Brand -->
+      <div class="col-12 lg:col-4">
+         <a href="/" class="logo footer-logo d-inline-block text-decoration-none mb-5" aria-label="Tripto home">
+          tripto<span class="logo-dot d-inline-block"></span>
+        </a>
+        <p class="small mb-7">
+          We help you find and book the perfect stay from cozy guesthouses to top hotels-with ease, trust, and the best deals.
+        </p>
+
+        <h6 class="fg-info fw-semibold mb-5">Download Our App</h6>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#" class="btn-solid fg-secondary theme-secondary d-flex align-items-center gap-3 text-start text-decoration-none">
+            <i class="fa-brands fa-apple fs-xl fg-black"></i>
+            <span class="lh-1">
+              <small class="d-block fg-black">Download on the</small>
+              <span class="fw-semibold fg-black">App Store</span>
+            </span>
+          </a>
+          <a href="#" class="btn-solid theme-secondary d-flex align-items-center gap-3 text-start text-decoration-none">
+            <i class="fa-brands fa-google-play fs-xl fg-black"></i>
+            <span class="lh-1">
+              <small class="d-block fg-black">GET IT ON</small>
+              <span class="fw-semibold fg-black">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Explore -->
+      <div class="col-6 md:col-3 lg:col-2 lg:offset-1">
+        <h6 class="fg-info fw-semibold mb-5">Explore</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Trending Destinations</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Summer Hotspots</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Winter Getaways</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Weekend Deals</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Family-Friendly Stays</a></li>
+        </ul>
+      </div>
+
+      <!-- Property Types -->
+      <div class="col-6 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Property Types</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Hotels</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Apartments</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Villas</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Cabins</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Glamping</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Domes</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="col-6 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Support</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Help Centre</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Live Chat Support</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">FAQs</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Get In Touch -->
+      <div class="col-6 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Get In Touch</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-5">
+          <li><a href="tel:+18001234567" class="text-white text-decoration-none">+1 (800) 123-456</a></li>
+          <li><a href="mailto:support@tripto.com" class="text-white text-decoration-none">support@tripto.com</a></li>
+        </ul>
+        <div class="d-flex gap-3">
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Facebook"><i class="fa-brands fg-black fa-facebook-f"></i></a>
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Instagram"><i class="fa-brands fg-black fa-instagram"></i></a>
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="YouTube"><i class="fa-brands fg-black fa-youtube"></i></a>
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Twitter"><i class="fa-brands fg-black fa-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-7">
+
+    <!-- Bottom bar -->
+    <div class="d-flex flex-column md:flex-row justify-content-between align-items-center gap-5">
+      <small>© 2025 Tripto. All rights reserved.</small>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-visa fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-diners-club fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-mastercard fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-stripe fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-paypal fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-google-pay fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-apple-pay fs-xl"></i></span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
     
 
 

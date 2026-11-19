@@ -1,0 +1,43 @@
+.width-button {
+    width: 40px;
+    height: 40px;
+}
+
+.height {
+    height: 450px;
+}
+
+.cricle-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.width-photos {
+    width: 350px;
+}
+
+.gap {
+    gap: 100px;
+}
+
+.box {
+    width: 300px;
+    height: 280px;
+    margin-left: 15%;
+    margin-top: 17px;
+}
+
+.Reserve {
+    width: 60%;
+    margin-left: 15%;
+}
+
+.height-line {
+    height: 3px;
+}
+
+.width-img {
+    width: 344px;
+    height: 300px;
+}

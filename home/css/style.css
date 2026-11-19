@@ -14,39 +14,37 @@
 
 /* samar-home */
 
+ 
+    
 
+.link {
 
-.left-padd{
-  padding-left: 20%;
+  border: 1px solid black;
+  background-color: white;
 }
 
+.link:hover {
+  background-color: black;
+  color: white;
+}
 
-.color-bordar{
+.big-img{
   height: 460px;
   border: 6px solid powderblue;
 }
 
-
-.width-card {
+.photo{
   height: 140px;
 
 }
-.paadi-left {
-  padding-left: 37%;
+.icon{padding-left: 45%;
 }
 
-
-.star-colo {
+.star {
   color: gold;
 }
 
-
-
-.margin-right {
-  margin-right: 6%;
-}
-
-.width {
+.width-card {
   width: 270px;
 }
 
@@ -57,28 +55,24 @@
   margin-top: 6%;
 }
 
-.borde-gray {
+.nimber {
   border: 1px solid gray;
   border-radius: 45%;
   background-color: rgb(214, 207, 207);
 }
 
-.background {
-  margin-right: 5%;
+.fa-heart:hover {
+  color: red;
+
+}
+
+
+.back-gray {
   background-color: gainsboro;
-}
-
-
-.gray {
-  background-color: gainsboro;
   margin-right: 5%;
 }
 
-.box-shado {
-  box-shadow: -8px 4px 0px blue;
-}
-
-.box-blue{
+.blue {
   top: 20px;
   left: -200px;
   width: 60px;
@@ -86,7 +80,19 @@
   box-shadow: -8px 4px 0px blue;
 }
 
-.box-pink {
+.box-blue {
+  box-shadow: -8px 4px 0px blue;
+}
+
+.yellow {
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: -150px;
+  box-shadow: -8px 4px 0px yellow;
+}
+
+.pink {
   width: 60px;
   height: 60px;
   top: 20px;
@@ -95,17 +101,7 @@
 
 }
 
-.box-yellow {
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: -150px;
-  box-shadow: -8px 4px 0px yellow;
-}
-
-
-
-.box-peru {
+.peru{
   width: 60px;
   height: 60px;
   bottom: 90px;
@@ -113,7 +109,7 @@
   box-shadow: -8px 4px 0px peru;
 }
 
-.box-green {
+.green {
   bottom: 50px;
   left: -250px;
   width: 60px;
@@ -125,12 +121,14 @@
 
 
 
-.color-blue {
+.color-icon {
   color: blue;
 }
 
 
 
+
+ 
 
 
 /* ///////////////////samar-home//////////////// */

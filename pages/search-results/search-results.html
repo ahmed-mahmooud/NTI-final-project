@@ -1,18 +1,457 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tripto | Search Results</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   
 
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+  <!-- Header -->
+  <header class="site-header bg-white border-bottom">
+        <div class="container-xl d-flex align-items-center justify-content-between gap-5 py-4 ms-7">
+
+            <a href="/" class="logo text-decoration-none" aria-label="Tripto home">
+                Tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <!-- Search summary -->
+            <a href="/"
+                class="d-flex align-items-center gap-4 border rounded-pill ps-5 pe-2 py-1 text-decoration-none fg-body small fw-semibold">
+                <span>Barcelona</span>
+                <span class="vr d-none sm:d-block"></span>
+                <span class="d-none sm:d-inline">14 Aug - 19 Aug</span>
+                <span class="vr d-none md:d-block"></span>
+                <span class="d-none md:d-inline">2 Guests</span>
+                <span class="btn-solid theme-primary btn-icon btn-sm rounded-circle"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+                  <a href="../help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+                <div id="authArea">
+
+                    <button type="button" id="loginBtn" class="btn-login btn-solid theme-primary"
+                        data-bs-toggle="dialog" data-bs-target="#loginDialog">
+                        Login
+                    </button>
+
+                    <a href="pages/profile/personal-data.html" id="profileLink" class="d-none">
+                        <img src="images/default-profile.jpg" alt="Profile" width="40" height="40"
+                            class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+  <!-- Main -->
+  <main class="container-xl py-7">
+    <div class="row g-7">
+
+      <!-- ============ Sidebar ============ -->
+      <aside class="col-12 lg:col-3">
+
+        <button type="button" class="btn btn-primary-custom w-100 mb-5 lg:d-none"
+          data-bs-toggle="drawer" data-bs-target="#filtersDrawer" aria-controls="filtersDrawer">
+          <i class="fa-solid fa-sliders me-2"></i> Filters
+        </button>
+
+        <dialog class="lg:drawer drawer-start" tabindex="-1" id="filtersDrawer" aria-labelledby="filtersDrawerLabel">
+
+          <div class="drawer-header lg:d-none">
+            <h2 class="drawer-title" id="filtersDrawerLabel">Filters</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+          </div>
+
+          <div class="drawer-body p-0">
+
+          
+
+            <!-- Filters panel -->
+            <div class="filters-panel w-100">
+              <form id="filtersForm" autocomplete="off">
+
+                <div class="filters-heading">
+                  <h2>Filter by:</h2>
+                  <button type="button" class="filters-clear" data-clear-filters>Clear</button>
+                </div>
+
+                <div class="accordion accordion-flush">
+
+                  <!-- Type of Place -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Type of Place
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body">
+                      <div class="d-flex flex-wrap gap-3">
+                        <label class="filter-chip"><input type="radio" name="placeType" value="any" checked> Any type</label>
+                        <label class="filter-chip"><input type="radio" name="placeType" value="Room"> Room</label>
+                        <label class="filter-chip"><input type="radio" name="placeType" value="Entire home"> Entire home</label>
+                      </div>
+                    </div>
+                  </details>
+
+                  <!-- Rooms and Beds -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Rooms and Beds
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body">
+
+                      <div class="counter-row">
+                        <span>Bedrooms</span>
+                        <div class="counter-controls">
+                          <button type="button" class="counter-btn" data-counter="bedrooms" data-step="-1" aria-label="Fewer bedrooms"><i class="fa-solid fa-minus"></i></button>
+                          <output data-counter-out="bedrooms">1</output>
+                          <button type="button" class="counter-btn" data-counter="bedrooms" data-step="1" aria-label="More bedrooms"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                      </div>
+
+                      <div class="counter-row">
+                        <span>Beds</span>
+                        <div class="counter-controls">
+                          <button type="button" class="counter-btn" data-counter="beds" data-step="-1" aria-label="Fewer beds"><i class="fa-solid fa-minus"></i></button>
+                          <output data-counter-out="beds">1</output>
+                          <button type="button" class="counter-btn" data-counter="beds" data-step="1" aria-label="More beds"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                      </div>
+
+                      <div class="counter-row">
+                        <span>Bathrooms</span>
+                        <div class="counter-controls">
+                          <button type="button" class="counter-btn" data-counter="bathrooms" data-step="-1" aria-label="Fewer bathrooms"><i class="fa-solid fa-minus"></i></button>
+                          <output data-counter-out="bathrooms">Any</output>
+                          <button type="button" class="counter-btn" data-counter="bathrooms" data-step="1" aria-label="More bathrooms"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </details>
+
+                  <!-- Room Size -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Room Size
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body filter-list">
+                      <div class="form-field"><input type="checkbox" class="check" id="sizeSmall" name="size" value="small"><label for="sizeSmall">Small (≤ 25 m²)</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="sizeMedium" name="size" value="medium"><label for="sizeMedium">Medium (26–40 m²)</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="sizeLarge" name="size" value="large"><label for="sizeLarge">Large (≥ 41 m²)</label></div>
+                    </div>
+                  </details>
+
+                  <!-- Distance From Centre -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Distance From Centre
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body">
+                      <label for="distance" class="range-label">Up to <output id="distanceOut">10+ km</output></label>
+                      <div class="form-range">
+                        <input type="range" class="form-range-input" id="distance" min="1" max="10" step="1" value="10">
+                      </div>
+                    </div>
+                  </details>
+
+                  <!-- Guest Review Score -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Guest Review Score
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body filter-list">
+                      <div class="form-field"><input type="checkbox" class="check" id="scoreExcellent" name="score" value="excellent"><label for="scoreExcellent">5.0 Excellent</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="scoreVeryGood" name="score" value="veryGood"><label for="scoreVeryGood">4.0+ Very good</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="scoreGood" name="score" value="good"><label for="scoreGood">3.0+ Good</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="scoreFair" name="score" value="fair"><label for="scoreFair">2.0+ Fair</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="scorePoor" name="score" value="poor"><label for="scorePoor">Less than 2.0</label></div>
+                    </div>
+                  </details>
+
+                  <!-- Property Classification -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Property Classification
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body filter-list">
+                      <div class="form-field"><input type="checkbox" class="check" id="star5" name="stars" value="5"><label for="star5"><span class="star-color">★★★★★</span> 5-star</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="star4" name="stars" value="4"><label for="star4"><span class="star-color">★★★★</span> 4-star</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="star3" name="stars" value="3"><label for="star3"><span class="star-color">★★★</span> 3-star</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="star2" name="stars" value="2"><label for="star2"><span class="star-color">★★</span> 2-star</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="star1" name="stars" value="1"><label for="star1"><span class="star-color">★</span> 1-star</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="star0" name="stars" value="0"><label for="star0">No rating</label></div>
+                    </div>
+                  </details>
+
+                  <!-- Amenities (generated by script) -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Amenities
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body" id="amenityGroups"></div>
+                  </details>
+
+                  <!-- Booking Options -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Booking Options
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body d-flex flex-wrap gap-3">
+                      <label class="filter-chip"><input type="checkbox" name="flag" value="instantBook"> Instant Book</label>
+                      <label class="filter-chip"><input type="checkbox" name="flag" value="selfCheckIn"> Self Check-in</label>
+                      <label class="filter-chip"><input type="checkbox" name="flag" value="freeCancel"> Free Cancellation</label>
+                      <label class="filter-chip"><input type="checkbox" name="flag" value="pets"> Allow Pets</label>
+                    </div>
+                  </details>
+
+                  <!-- Payment Options -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Payment Options
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body d-flex flex-wrap gap-3">
+                      <label class="filter-chip"><input type="checkbox" name="flag" value="payAtProperty"> Pay at property</label>
+                      <label class="filter-chip"><input type="checkbox" name="flag" value="noPrepayment"> No prepayment needed</label>
+                    </div>
+                  </details>
+
+                  <!-- Property Type -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Property Type
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body filter-list">
+                      <div class="form-field"><input type="checkbox" class="check" id="ptDom" name="propertyType" value="Dom"><label for="ptDom">Dom</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="ptHouse" name="propertyType" value="House"><label for="ptHouse">House</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="ptGuesthouse" name="propertyType" value="Guesthouse"><label for="ptGuesthouse">Guesthouse</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="ptApartment" name="propertyType" value="Apartment"><label for="ptApartment">Apartment</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="ptHotel" name="propertyType" value="Hotel"><label for="ptHotel">Hotel</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="ptCabin" name="propertyType" value="Cabin"><label for="ptCabin">Cabin</label></div>
+                    </div>
+                  </details>
+
+                  <!-- Accessibility Features (العناصر دي مبدئية، غيرها زي ما تحب) -->
+                  <details class="accordion-item">
+                    <summary class="accordion-header">
+                      Accessibility Features
+                      <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m2 5 6 6 6-6"/></svg>
+                    </summary>
+                    <div class="accordion-body filter-list">
+                      <div class="form-field"><input type="checkbox" class="check" id="accStepFree" name="access" value="Step-free access"><label for="accStepFree">Step-free access</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="accElevator" name="access" value="Elevator"><label for="accElevator">Elevator</label></div>
+                      <div class="form-field"><input type="checkbox" class="check" id="accBathroom" name="access" value="Accessible bathroom"><label for="accBathroom">Accessible bathroom</label></div>
+                    </div>
+                  </details>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+        </dialog>
+      </aside>
+
+
+      <!-- ============ Results ============ -->
+      <section class="col-12 lg:col-9">
+
+        <div id="resultsTop" class="mb-5">
+          <h1 class="results-title">Explore 300+ Places in Barcelona</h1>
+          <p class="results-count" id="resultsCount"></p>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center gap-3 mb-5">
+
+          <!-- Sort -->
+          <div>
+            <button type="button" class="sort-btn" data-bs-toggle="menu" aria-expanded="false">
+              Sort by: <span id="sortLabel">Top Reviewed</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="menu">
+              <a class="menu-item" href="#" data-sort="reviewed">Top Reviewed</a>
+              <a class="menu-item" href="#" data-sort="priceLow">Price: Low to High</a>
+              <a class="menu-item" href="#" data-sort="priceHigh">Price: High to Low</a>
+              <a class="menu-item" href="#" data-sort="rating">Highest Rated</a>
+            </div>
+          </div>
+
+          <!-- Grid / List -->
+          <div class="view-toggle">
+            <button type="button" class="view-btn" data-view="list" aria-pressed="false" aria-label="List view"><i class="fa-solid fa-list"></i></button>
+            <button type="button" class="view-btn active" data-view="grid" aria-pressed="true" aria-label="Grid view"><i class="fa-solid fa-table-cells-large"></i></button>
+          </div>
+
+        </div>
+
+        <div class="hotel-grid" id="hotelList"></div>
+
+        <div id="emptyState" class="text-center py-12 d-none">
+          <div class="empty-icon mb-5"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h2 class="empty-title">No stays match your filters</h2>
+          <p class="results-count">Try removing some filters to see more results.</p>
+          <button type="button" class="btn btn-primary-custom" data-clear-filters>Clear filters</button>
+        </div>
+
+        <nav aria-label="Search results pages" class="mt-7">
+          <ul id="pagination" class="pagination"></ul>
+        </nav>
+
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- Footer -->
+ 
+<footer class="bg-black fg-white pt-12 pb-7 col-12 md:col-12">
+  <div class="container">
+
+    <div class="row gy-7">
+
+      <!-- Brand -->
+      <div class="col-12 lg:col-4">
+         <a href="/" class="logo footer-logo d-inline-block text-decoration-none mb-5" aria-label="Tripto home">
+          tripto<span class="logo-dot d-inline-block"></span>
+        </a>
+        <p class="small mb-7">
+          We help you find and book the perfect stay from cozy guesthouses to top hotels-with ease, trust, and the best deals.
+        </p>
+
+        <h6 class="fg-info fw-semibold mb-5">Download Our App</h6>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#" class="btn-solid fg-secondary theme-secondary d-flex align-items-center gap-3 text-start text-decoration-none">
+            <i class="fa-brands fa-apple fs-xl fg-black"></i>
+            <span class="lh-1">
+              <small class="d-block fg-black">Download on the</small>
+              <span class="fw-semibold fg-black">App Store</span>
+            </span>
+          </a>
+          <a href="#" class="btn-solid theme-secondary d-flex align-items-center gap-3 text-start text-decoration-none">
+            <i class="fa-brands fa-google-play fs-xl fg-black"></i>
+            <span class="lh-1">
+              <small class="d-block fg-black">GET IT ON</small>
+              <span class="fw-semibold fg-black">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Explore -->
+      <div class="col-6 md:col-3 lg:col-2 lg:offset-1">
+        <h6 class="fg-info fw-semibold mb-5">Explore</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Trending Destinations</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Summer Hotspots</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Winter Getaways</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Weekend Deals</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Family-Friendly Stays</a></li>
+        </ul>
+      </div>
+
+      <!-- Property Types -->
+      <div class="col-6 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Property Types</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Hotels</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Apartments</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Villas</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Cabins</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Glamping</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Domes</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="col-6 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Support</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Help Centre</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Live Chat Support</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">FAQs</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Get In Touch -->
+      <div class="col-6 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Get In Touch</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-5">
+          <li><a href="tel:+18001234567" class="text-white text-decoration-none">+1 (800) 123-456</a></li>
+          <li><a href="mailto:support@tripto.com" class="text-white text-decoration-none">support@tripto.com</a></li>
+        </ul>
+        <div class="d-flex gap-3">
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Facebook"><i class="fa-brands fg-black fa-facebook-f"></i></a>
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Instagram"><i class="fa-brands fg-black fa-instagram"></i></a>
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="YouTube"><i class="fa-brands fg-black fa-youtube"></i></a>
+          <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Twitter"><i class="fa-brands fg-black fa-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-7">
+
+    <!-- Bottom bar -->
+    <div class="d-flex flex-column md:flex-row justify-content-between align-items-center gap-5">
+      <small>© 2025 Tripto. All rights reserved.</small>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-visa fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-diners-club fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-mastercard fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-stripe fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-cc-paypal fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-google-pay fs-xl"></i></span>
+        <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i class="fa-brands fg-black fa-apple-pay fs-xl"></i></span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- Bootstrap JavaScript -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <script src="js/script.js"></script>
+
 </body>
+
 </html>

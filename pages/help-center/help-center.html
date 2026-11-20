@@ -3,13 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ِArticle Details</title>
+    <link rel="icon" href="../../assets/images/page-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+      <header class="site-header bg-white">
+        <div class="container-xl d-flex align-items-center justify-content-between py-5">
+
+            <a href="/" class="logo text-decoration-none ms-7" aria-label="Tripto home">
+                tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+
+                <a href="../../pages/help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+
+                <div id="authArea">
+
+
+                    <a href="../../pages/profile/personal-data.html" id="profileLink" class="">
+                        <img src="../../assets/images/default-profile.jpg" alt="Profile" width="40" height="40"
+                            class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <section class="container">
+     
+
+    <h2 >Help Center</h2>
+    <h4 class="mt-4">Hi, Traveler</h4>
+    <form action="account-articles.html" class="d-flex gap-3 mt-5">
+                <input type="text"class="form-control rounded-5 py-2 px-3 bg-light"
+        placeholder="Ask">
+        <button type="submit" class="btn bg-primary rounded-5 fg-white"> <i class="fas fa-search fg-white"></i>search</button>
+    </form>
+
+  
+    <div class="mt-5 mb-5">
+    <h3>Explore help articles</h3>
     
+    <div class="row g-5">
+        
+        <div class="col-6 mt-5">
+            <div class="d-flex justify-content-between  border rounded-4 p-3">
+                <div>
+                    <span><i class="fa-solid fa-hotel me-2"></i> Stays</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+
+            <div class="d-flex justify-content-between border rounded-4 p-3 mt-4">
+                <div>
+                    <span><i class="fa-solid fa-shield-alt me-2"></i> Security</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+
+            <div class="d-flex justify-content-between  border rounded-4 p-3 mt-4">
+                <div>
+                    <span><i class="fa-solid fa-receipt me-2"></i> Refunds & Charges</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+
+            <a href="account-articles.html" class="d-flex justify-content-between  border rounded-4 p-3 mt-4 text-decoration-none fg-black">
+                <div>
+                    <span><i class="fa-solid fa-user me-2"></i> Account</span>
+                </div>  
+                <div>
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-6 mt-5">
+            <div class="d-flex justify-content-between  border rounded-4 p-3">
+                <div>
+                    <span><i class="fa-solid fa-award me-2"></i> Loyalty & Rewards</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+
+            <div class="d-flex justify-content-between  border rounded-4 p-3 mt-4">
+                <div>
+                    <span><i class="fa-solid fa-wand-magic-sparkles me-2"></i> Things to do</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+
+            <div class="d-flex justify-content-between  border rounded-4 p-3 mt-4">
+                <div>
+                    <span><i class="fa-solid fa-user-lock me-2"></i> Privacy</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+
+            <div class="d-flex justify-content-between  border rounded-4 p-3 mt-4">
+                <div>
+                    <span><i class="fa-solid fa-triangle-exclamation me-2"></i> Travel Alerts</span>
+                </div>
+                <div><span><i class="fa-solid fa-chevron-right"></i></span></div>
+            </div>
+        </div>
+
+    </div> 
+
+</div>
+
+    </section>
+
+
+    
+<footer class="bg-black fg-white pt-12 pb-7 col-12 md:col-12">
+  <div class="container">
+
+    <div class="row gy-7">
+
+      
+
+      <!-- Explore -->
+      <div class="col-3 md:col-6 lg:col-3 lg:offset-2">
+        <h6 class="fg-info fw-semibold mb-5">Explore</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Trending Destinations</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Summer Hotspots</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Winter Getaways</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Weekend Deals</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Family-Friendly Stays</a></li>
+        </ul>
+      </div>
+
+      <!-- Property Types -->
+      <div class="col-3 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Property Types</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Hotels</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Apartments</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Villas</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Cabins</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Glamping</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Domes</a></li>
+        </ul>
+      </div>
+
+      <div class="col-3 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Support</h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none">Help Centre</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Live Chat Support</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">FAQs</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">Contact Us</a></li>
+        </ul>
+    </div>
+    
+      <div class="col-3 md:col-3 lg:col-2">
+        <h6 class="fg-info fw-semibold mb-5">Get In Touch </h6>
+        <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+          <li><a href="#" class="fg-white text-decoration-none"> +1 (800) 123‑456</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">support@tripto.com</a></li>
+          <li><a href="#" class="fg-white text-decoration-none">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </a></li>
+        </ul>
+      </div>
+
+    
+
+    </div>
+
+    <hr class="my-7">
+
+   
+    <div class="d-flex flex-column md:flex-row justify-content-center align-items-center gap-5">
+      <small>© 2025 Tripto. All rights reserved.</small>
+
+    </div>
+
+  </div>
+</footer>
+
 
 
 

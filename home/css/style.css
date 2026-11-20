@@ -328,6 +328,10 @@ body{
  color: red; 
  cursor: pointer; 
  
+} 
+.flag{
+ width: 30px; 
+ height: 20px;
 }
 
 

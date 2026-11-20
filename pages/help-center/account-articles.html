@@ -9,7 +9,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+      <header class="site-header bg-white">
+        <div class="container-xl d-flex align-items-center justify-content-between py-5">
+
+            <a href="/" class="logo text-decoration-none ms-7" aria-label="Tripto home">
+                tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+
+                <a href="pages/help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+
+                <div id="authArea">
+
+                    <button type="button" id="loginBtn" class="btn-login btn-solid theme-primary" data-bs-toggle="dialog"
+                        data-bs-target="#loginDialog">
+                        Login
+                    </button>
+
+                    <a href="pages/profile/personal-data.html" id="profileLink" class="d-none">
+                        <img src="assets/images/default-profile.jpg" alt="Profile" width="40" height="40"
+                            class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
 
 
 

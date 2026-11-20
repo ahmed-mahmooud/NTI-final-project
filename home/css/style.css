@@ -305,8 +305,30 @@ body{
 
 
 /* sarah-home  */
-
-
+.trust-tripto {
+  background-image: url(../sections/images/Full\ Frame.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size:contain;
+  
+} 
+.destinations-card{
+  height: 400px; 
+  width: 250px;
+}
+.heart{
+  width: 35px; 
+  height: 35px; 
+  line-height: 2.5; 
+  margin-right: 2%; 
+  margin-top: 3%;
+} 
+.heart:hover i{
+ color: red; 
+ cursor: pointer; 
+ 
+}
 
 
 

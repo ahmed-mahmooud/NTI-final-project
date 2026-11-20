@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@500;600&display=swap");
+
+    .site-header {
+      border-bottom: 1px solid #eee;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    /* Logo */
+    .logo {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      line-height: 1;
+      letter-spacing: -0.5px;
+      color: #0b5cff;
+    }
+
+    .logo:hover {
+      color: #0b5cff;
+    }
+
+    .logo-dot {
+      width: 0.95em;
+      height: 0.95em;
+      margin-left: 0.05em;
+      border: 0.26em solid #ffc82c;
+      border-radius: 50%;
+      vertical-align: -0.1em;
+    }
+
+    /* Language / currency */
+    .lang-btn {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1f2a44;
+    }
+
+    .lang-btn:hover {
+      color: #0b5cff;
+    }
+
+    /* Support icon */
+    .support-btn {
+      font-size: 1.35rem;
+      line-height: 1;
+      color: #0b5cff;
+    }
+
+    .support-btn:hover {
+      color: #0848cc;
+    }
+
+    /* Login */
+    .btn-login {
+      padding: 0.55rem 1.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      background: #0b5cff;
+      border: 0;
+      border-radius: 0.5rem;
+    }
+
+    .btn-login:hover,
+    .btn-login:focus {
+      color: #fff;
+      background: #0848cc;
+    }
+
+    /* Mobile */
+    @media (max-width: 575.98px) {
+      .logo {
+        font-size: 1.55rem;
+      }
+
+      .btn-login {
+        padding: 0.45rem 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header bg-white border-bottom">
+        <div class="container-xl d-flex align-items-center justify-content-between gap-5 py-4 ms-7">
+
+            <a href="/" class="logo text-decoration-none" aria-label="Tripto home">
+                Tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <!-- Search summary -->
+            <a href="/"
+                class="d-flex align-items-center gap-4 border rounded-pill ps-5 pe-2 py-1 text-decoration-none fg-body small fw-semibold">
+                <span>Barcelona</span>
+                <span class="vr d-none sm:d-block"></span>
+                <span class="d-none sm:d-inline">14 Aug - 19 Aug</span>
+                <span class="vr d-none md:d-block"></span>
+                <span class="d-none md:d-inline">2 Guests</span>
+                <span class="btn-solid theme-primary btn-icon btn-sm rounded-circle"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+                  <a href="pages/help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+                <div id="authArea">
+
+                    <button type="button" id="loginBtn" class="btn-login btn-solid theme-primary"
+                        data-bs-toggle="dialog" data-bs-target="#loginDialog">
+                        Login
+                    </button>
+
+                    <a href="pages/profile/personal-data.html" id="profileLink" class="d-none">
+                        <img src="images/default-profile.jpg" alt="Profile" width="40" height="40"
+                            class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

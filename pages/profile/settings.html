@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,214 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <header class="site-header bg-white">
+        <div class="container-xl d-flex align-items-center justify-content-between py-5">
+
+            <a href="/" class="logo text-decoration-none ms-7" aria-label="Tripto home">
+                tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+
+                <a href="../../pages/help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+
+                <div id="authArea">
 
 
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+                    <a href="../../pages/profile/personal-data.html" id="profileLink" class=""">
+                        <img src=" ../../assets/images/default-profile.jpg" alt="Profile" width="40" height="40"
+                        class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+  
+    <section class="account-page py-7">
+        <div class="container-xl">
+            <div class="row gy-5">
+
+                <aside class="col-12 lg:col-3">
+                    <div class="account-sidebar bg-white rounded-4 p-5 d-flex flex-column h-100">
+
+                        <div class="d-flex align-items-center gap-4 px-2">
+                            <img src="../../assets/images/default-profile.jpg" alt="Emmily Morgan" width="56"
+                                height="56" class="rounded-circle object-fit-cover">
+                            <div>
+                                <p class="fw-semibold mb-0">Emmily Morgan</p>
+                                <small class="text-secondary">Customer Operations</small>
+                            </div>
+                        </div>
+
+                        <hr class="my-5">
+
+                        <ul class="nav flex-column gap-2 flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3" href="personal-data.html">
+                                    <i class="fa-regular fa-circle-user"></i>
+                                    Personal Data
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3  " href="payment-account.html">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                    Payment Account
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3" href="trips.html">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                    Trips
+                                    <i class="fa-solid fa-chevron-down ms-auto"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3" href="whishlist.html">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Wish Lists
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3" href="support.html">
+                                    <i class="fa-solid fa-headset"></i>
+                                    Support
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3" href="reviews.html">
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    My Reviews
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="my-4">
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-3 rounded-3 active" href="settings.html">
+                                    <i class="fa-solid fa-gear"></i>
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li class="nav-item mt-auto pt-7">
+                                <a class="nav-link logout-link d-flex align-items-center gap-3 rounded-3" href="#">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </aside>
+
+                <div class="col-12 lg:col-9">
+                    <main class="bg-white rounded-4 h-100">
+                        <!--  Content here -->
+                    </main>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-black fg-white pt-12 pb-7 col-12 md:col-12">
+        <div class="container">
+
+            <div class="row gy-7">
+
+
+
+                <!-- Explore -->
+                <div class="col-3 md:col-6 lg:col-3 lg:offset-2">
+                    <h6 class="fg-info fw-semibold mb-5">Explore</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none">Trending Destinations</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Summer Hotspots</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Winter Getaways</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Weekend Deals</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Family-Friendly Stays</a></li>
+                    </ul>
+                </div>
+
+                <!-- Property Types -->
+                <div class="col-3 md:col-3 lg:col-2">
+                    <h6 class="fg-info fw-semibold mb-5">Property Types</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none">Hotels</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Apartments</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Villas</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Cabins</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Glamping</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Domes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-3 md:col-3 lg:col-2">
+                    <h6 class="fg-info fw-semibold mb-5">Support</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none">Help Centre</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Live Chat Support</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Get In Touch -->
+                <div class="col-3 md:col-3 lg:col-2">
+                    <h6 class="fg-info fw-semibold mb-5">Get In Touch </h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none"> +1 (800) 123‑456</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">support@tripto.com</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                            </a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <hr class="my-7">
+
+            <!-- Bottom bar -->
+            <div class="d-flex flex-column md:flex-row justify-content-center align-items-center gap-5">
+                <small>© 2025 Tripto. All rights reserved.</small>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

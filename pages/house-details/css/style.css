@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@500;600&display=swap");
+
+.site-header {
+    border-bottom: 1px solid #eee;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+.logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: #0b5cff;
+}
+
+.logo:hover {
+    color: #0b5cff;
+}
+
+.logo-dot {
+    width: 0.95em;
+    height: 0.95em;
+    margin-left: 0.05em;
+    border: 0.26em solid #ffc82c;
+    border-radius: 50%;
+    vertical-align: -0.1em;
+}
+
+.lang-btn {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1f2a44;
+}
+
+.lang-btn:hover {
+    color: #0b5cff;
+}
+
+
+.support-btn {
+    font-size: 1.35rem;
+    line-height: 1;
+    color: #0b5cff;
+}
+
+.support-btn:hover {
+    color: #0848cc;
+}
+
+
+.btn-login {
+    padding: 0.55rem 1.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: #0b5cff;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    color: #fff;
+    background: #0848cc;
+}
+
+
+@media (max-width: 575.98px) {
+    .logo {
+        font-size: 1.55rem;
+    }
+
+    .btn-login {
+        padding: 0.45rem 1.1rem;
+    }
+}
+
+
+
 .width-button {
     width: 40px;
     height: 40px;
@@ -16,6 +96,15 @@
 .width-photos {
     width: 350px;
 }
+.width-photos , .overview-img{
+    transition: .3s;
+
+}
+
+.width-photos:hover , .overview-img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+} 
 
 .gap {
     gap: 100px;

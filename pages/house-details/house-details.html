@@ -9,6 +9,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="site-header bg-white">
+        <div class="container-xl d-flex align-items-center justify-content-between py-5">
+
+            <a href="/" class="logo text-decoration-none ms-7" aria-label="Tripto home">
+                tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+
+                <a href="../../pages/help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+
+                <div id="authArea">
+
+                   
+
+                    <a href="../../pages/profile/personal-data.html" id="profileLink">
+                        <img src="../../assets/images/default-profile.jpg" alt="Profile" width="40" height="40"
+                            class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
     <section class="container">
         <div class="d-flex justify-content-between align-itmes-center mt-5">
             <div>
@@ -17,7 +53,7 @@
             </div>
             <div class="d-flex gap-5"> 
                   <button class="btn border rounded-circle p-2 d-flex bg-white width-button" >
-            <i class="far fa-heart text-dark"></i>
+            <i class="fa-regular fa-heart " onclick="fav()" id="favorite"></i>
         </button>
        <button class="btn border rounded-circle p-2 d-flex bg-white width-button" >
             <i class="fas fa-share-alt text-dark"></i>
@@ -40,7 +76,7 @@
     
 
     <div class="position-relative overflow-hidden rounded-5 w-50 " >
-        <img class="w-100 h-100" src="img/231d5027b6d4f411d7fa146c294aa2d6cedb8681.jpg" alt="1">
+        <img class="w-100 h-100 overview-img" src="img/231d5027b6d4f411d7fa146c294aa2d6cedb8681.jpg" alt="1">
         
         <div class="position-absolute bottom-0 start-0 m-3 bg-white rounded-5 p-2 pe-3 d-flex gap-3 " >
             <img class=" cricle-photo" src="img/4a20c9902674e0ca0c7eefed1477687623ca2246.jpg" alt="2" >
@@ -226,7 +262,7 @@
         <div class="d-flex gap-3 align-items-center">
             <span>5</span>
             <div class="progress w-100 height-line ">
-                <div class="progress-blak bg-black w-75"></div>
+                <div class="progress-blak bg-black w-100"></div>
 
             </div>
         </div>
@@ -240,21 +276,20 @@
  <div class="d-flex gap-3 align-items-center">
             <span>3</span>
             <div class="progress w-100 height-line ">
-                <div class="progress-blak bg-black w-1"></div>
+                <div class="progress-blak bg-black w-50"></div>
 
             </div>
         </div>
  <div class="d-flex gap-3 align-items-center">
             <span>2</span>
             <div class="progress w-100 height-line ">
-                <div class="progress-blak bg-black w-1"></div>
+                <div class="progress-blak bg-black w-25"></div>
 
             </div>
         </div>
  <div class="d-flex gap-3 align-items-center">
             <span>1</span>
-            <div class="progress w-100 height-line ">
-                   </div>
+            <div class="progress w-100 height-line w-0"></div>
         </div>
 
         

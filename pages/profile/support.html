@@ -7,8 +7,132 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+     <style>
+      
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@500;600&display=swap");
+
+.site-header {
+  border-bottom: 1px solid #eee;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Logo */
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: #0b5cff;
+}
+
+.logo:hover {
+  color: #0b5cff;
+}
+
+.logo-dot {
+  width: 0.95em;
+  height: 0.95em;
+  margin-left: 0.05em;
+  border: 0.26em solid #ffc82c;
+  border-radius: 50%;
+  vertical-align: -0.1em;
+}
+
+/* Language / currency */
+.lang-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.lang-btn:hover {
+  color: #0b5cff;
+}
+
+/* Support icon */
+.support-btn {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: #0b5cff;
+}
+
+.support-btn:hover {
+  color: #0848cc;
+}
+
+/* Login */
+.btn-login {
+  padding: 0.55rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: #0b5cff;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  color: #fff;
+  background: #0848cc;
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .logo {
+    font-size: 1.55rem;
+  }
+
+  .btn-login {
+    padding: 0.45rem 1.1rem;
+  }
+}
+
+.help-hover{
+    transition: all 0.3s ease;
+}
+.help-hover:hover{background-color: #0b6efd;
+border-color: #0b6efd;
+    color: #fff;}
+    </style>
 </head>
 <body>
+    <section class="container">
+       <div>
+  <h4 class="fw-bold mb-1">Help and feedback</h4>
+  <p class="text-secondary small mb-4">Have questions or feedback for us? We're here.</p>
+
+  <div class="d-flex flex-column gap-3">
+
+    <a href="#" class="d-flex justify-content-between border rounded-3 px-4 py-3 text-decoration-none fg-black bg-white">
+      <div class="d-flex align-items-center gap-3">
+        <i class="fa-regular fa-comment-dots text-secondary"></i>
+        <span>Chat now</span>
+      </div>
+      <i class="fa-solid fa-chevron-right text-secondary small"></i>
+    </a>
+
+    <a href="../help-center/help-center.html" class="d-flex justify-content-between  border rounded-3 help-hover px-4 py-3 text-decoration-none fg-black bg-white">
+      <div class="d-flex align-items-center gap-3">
+        <i class="fa-solid fa-headset text-secondary"></i>
+        <span>Visit the help center</span>
+      </div>
+      <i class="fa-solid fa-chevron-right text-secondary small"></i>
+    </a>
+
+    <a href="#" class="d-flex justify-content-between border rounded-3 px-4 py-3 text-decoration-none fg-black bg-white">
+      <div class="d-flex align-items-center gap-3">
+        <i class="fa-regular fa-pen-to-square text-secondary"></i>
+        <span>Share your feedback</span>
+      </div>
+      <i class="fa-solid fa-chevron-right text-secondary small"></i>
+    </a>
+
+  </div>
+</div>
+
+    </section>
     
 
 

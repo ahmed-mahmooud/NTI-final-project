@@ -1,17 +1,989 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="assets/images/page-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
- 
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+<body>
+
+    <!-- ahmed-sections -->
+    <header class="site-header bg-white">
+        <div class="container-xl d-flex align-items-center justify-content-between py-5">
+
+            <a href="/" class="logo text-decoration-none ms-7" aria-label="Tripto home">
+                tripto<span class="logo-dot d-inline-block"></span>
+            </a>
+
+            <div class="d-flex align-items-center gap-3 sm:gap-5 me-7">
+
+                <button type="button"
+                    class="lang-btn btn btn-link d-flex align-items-center gap-3 text-decoration-none p-1"
+                    data-bs-toggle="dialog" data-bs-target="#languageDialog">
+                    <img src="https://flagcdn.com/w40/us.png" alt="" width="20" height="20"
+                        class="rounded-circle object-fit-cover">
+                    <span>USD</span>
+                </button>
+
+                <a href="pages/help-center/help-center.html" class="support-btn btn btn-link p-1"
+                    aria-label="Customer support">
+                    <i class="fa-solid fa-headset"></i>
+                </a>
+
+                <div id="authArea">
+
+                    <button type="button" id="loginBtn" class="btn-login btn-solid theme-primary"
+                        data-bs-toggle="dialog" data-bs-target="#loginDialog">
+                        Login
+                    </button>
+
+                    <a href="pages/profile/personal-data.html" id="profileLink" class="d-none">
+                        <img src="assets/images/default-profile.jpg" alt="Profile" width="40" height="40"
+                            class="rounded-circle object-fit-cover">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Language dialog -->
+    <dialog class="dialog" id="languageDialog">
+        <div class="dialog-header">
+            <h2 class="dialog-title">Language &amp; currency</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+        </div>
+        <div class="dialog-body"><!-- content here --></div>
+    </dialog>
+
+    <!-- Login dialog -->
+    <dialog class="dialog" id="loginDialog">
+        <div class="dialog-header">
+            <h2 class="dialog-title">Login</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+        </div>
+        <div class="dialog-body"><!-- content here --></div>
+    </dialog>
+
+
+
+
+
+
+
+
+
+    <section class="position-relative overflow-hidden rounded-bottom-7 bg-black hero-section">
+        <div class="overlay bg-black bg-40 col-12 h-100">
+
+
+            <div class="container position-relative py-12">
+
+                <div class="text-center text-white pt-12 md:mt-12 pb-7 md:pb-12">
+                    <h1 class="fw-bold fs-3xl mb-3 fg-white">Your Trip Starts Here</h1>
+                    <p class="fw-semibold fs-md md:fs-lg mb-0 fg-white">Find unique stays across hotels, villas, and
+                        more.</p>
+                </div>
+
+                <div class="lg:col-10 mx-auto">
+
+                    <!-- Category tabs -->
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="overflow-x-auto max-w-100">
+                            <ul
+                                class="nav nav-pills flex-nowrap bg-transparent  bg-opacity-50 rounded-pill p-3 gap-1 hero-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active  bg-white fg-black rounded-pill d-flex align-items-center gap-3 py-1 px-5 small fw-semibold text-nowrap"
+                                        href="#">
+                                        <i class="fa-regular fa-building"></i> Hotel
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fg-white rounded-pill d-flex align-items-center gap-3 py-1 px-5 small fw-semibold text-nowrap"
+                                        href="#">
+                                        <i class="fa-solid fa-house"></i> House
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fg-white rounded-pill d-flex align-items-center gap-3 py-1 px-5 small fw-semibold text-nowrap"
+                                        href="#">
+                                        <i class="fa-solid fa-people-roof"></i> Guest House
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fg-white rounded-pill d-flex align-items-center gap-3 py-1 px-5 small fw-semibold text-nowrap"
+                                        href="#">
+                                        <i class="fa-solid fa-tree"></i> Cabins
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fg-white rounded-pill d-flex align-items-center gap-3 py-1 px-5 small fw-semibold text-nowrap"
+                                        href="#">
+                                        <i class="fa-solid fa-campground"></i> Glamping
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fg-white rounded-pill d-flex align-items-center gap-3 py-1 px-5 small fw-semibold text-nowrap"
+                                        href="#">
+                                        <i class="fa-solid fa-igloo"></i> Doms
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <form action="pages/search-results/search-results.html" class="bg-white rounded-6 shadow p-5 md:p-7 mb-7">
+                        <div class="d-flex flex-column md:flex-row md:align-items-center gap-5 md:gap-7">
+
+
+                            <div class="position-relative flex-fill">
+                                <label for="location" class="d-block fw-semibold small mb-1">Location</label>
+                                <input type="text" id="location" name="location" autocomplete="off"
+                                    class="form-control form-control-sm border-0 p-0 shadow-none"
+                                    placeholder="Where are you going?" data-bs-toggle="menu"
+                                    data-bs-auto-close="outside">
+                                    <p class="fg-danger fw-bold" id="errorP" ></p>
+
+
+                                <div class="menu border-0 shadow rounded-6 mt-5 p-3">
+                                    <h6 class="menu-header">Recent searches</h6>
+                                    <a class="menu-item rounded-5 d-flex align-items-center gap-3 py-3"
+                                        href="pages/search-results/search-results.html">
+                                        <i class="fa-solid fa-clock-rotate-left fg-secondary"></i> Barcelona
+                                    </a>
+                                  
+                                </div>
+
+
+                            </div>
+
+                            <div class="vr d-none md:d-block"></div>
+
+                            <div class="md:text-center">
+                                <label for="checkIn" class="d-block fw-semibold small mb-1">Check In</label>
+                                <input type="date" id="checkIn" name="checkIn"
+                                    class="form-control form-control-sm border-0 p-0 shadow-none md:text-center bg-transparent"
+                                    placeholder="Add Dates">
+                            </div>
+
+                            <div class="vr d-none md:d-block"></div>
+
+                            <div class="md:text-center">
+                                <label for="checkOut" class="d-block fw-semibold small mb-1">Check Out</label>
+                                <input type="date" id="checkOut" name="checkOut"
+                                    class="form-control form-control-sm border-0 p-0 shadow-none md:text-center bg-transparent"
+                                    placeholder="Add Dates">
+                            </div>
+
+                            <div class="vr d-none md:d-block"></div>
+
+                            <div>
+                                <span class="d-block fw-semibold small mb-1">Rooms and Guests</span>
+                                <button type="button"
+                                    class="btn btn-link p-0 fg-secondary text-decoration-none small text-start">
+                                    1 rooms, 1 adults, 0 children
+                                </button>
+                            </div>
+
+                            <a hef="pages/search-results/search-results.html" id="searchBtn"
+                                class="btn-solid theme-primary fw-semibold rounded-5 px-7 py-3 d-flex align-items-center justify-content-center gap-3">
+                                <i class="fa-solid fa-magnifying-glass"></i> Search
+                            </a>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ///////////////////////ahmed-sections///////////////////////////// -->
+
+
+    <!-- sarah-sections -->
+
+    <section class="  w-100 p-6">
+        <h2 class="  text-center mb-5 "> Why Travellers Trust Tripto</h2>
+        <div class="container d-flex trust-tripto  ">
+
+            <div class="col-4 d-flex justify-content-center flex-column align-items-center gap-3 text-center">
+                <img src="assets/images/Icon.png" alt="">
+                <h3> No hidden fees</h3>
+                <p>Transparent pricing with no hidden <br> fees.</p>
+
+            </div>
+            <div class="col-4 d-flex justify-content-center flex-column align-items-center gap-3 text-center">
+                <img src="assets/images/Icon2.png" alt="">
+                <h3>Instant booking</h3>
+                <p>Get confirmation right after you <br> reserve.</p>
+
+            </div>
+            <div class="col-4 d-flex justify-content-center flex-column align-items-center gap-3 text-center ">
+                <img src="assets/images/Icon3.png" alt="">
+                <h3> Flexibility</h3>
+                <p>Flexible options with <br> free cancellation on many listings.</p>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+    <section class="trending-destinations container">
+
+        <h2 class="  my-10"> Trending Destinations</h2>
+
+        <div class="d-flex justify-content-start gap-3 mb-5 flex-wrap">
+            <button type="button" class="btn-outline theme-inverse rounded-pill active"> <i class="fa-solid fa-fan"></i>Spring
+                Picks</button>
+            <button type="button" class="btn-outline theme-inverse rounded-pill"> <i class="fa-solid fa-sun"></i>Summer
+                Hotspot</button>
+            <button type="button" class="btn-outline theme-inverse rounded-pill"> <i class="fa-solid fa-tree"></i>Autumn
+                Escape</button>
+            <button type="button" class="btn-outline theme-inverse rounded-pill"> <i
+                    class="fa-regular fa-snowflake"></i>Winter Getaway</button>
+        </div>
+
+      
+
+        <div class="destinations-cards d-flex flex-nowrap gap-3">
+
+            <div class="card theme-contrast destinations-card fg-white">
+                <img src="assets/images/paris.jpg" class="card-img h-100" alt="">
+                <div class="card-img-overlay">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fg-white">
+                        <h4 class="card-title">Paris, France</h4>
+                        <p class="fg-warning">From $128/night</p>
+                        <p class="card-text"><small>Romantic escapes, art, and cafés.</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card theme-contrast destinations-card fg-white">
+                <img src="assets/images/santroni.jpg" class="card-img h-100" alt="">
+                <div class="card-img-overlay">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fg-white">
+                        <h4 class="card-title">Santorini, Greece</h4>
+                        <p class="fg-warning">From $140/night</p>
+                        <p class="card-text"><small>Stunning sunsets and unique architecture.</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card theme-contrast destinations-card fg-white ">
+                <img src="assets/images/bali.jpg" class="card-img h-100" alt="">
+                <div class="card-img-overlay">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fg-white">
+                        <h4 class="card-title">Paris, France</h4>
+                        <p class="fg-warning">From $128/night</p>
+                        <p class="card-text"><small>Romantic escapes, art, and cafés.</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card theme-contrast destinations-card fg-white">
+                <img src="assets/images/japan.jpg" class="card-img h-100" alt="">
+                <div class="card-img-overlay">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fg-white">
+                        <h4 class="card-title">Santorini, Greece</h4>
+                        <p class="fg-warning">From $140/night</p>
+                        <p class="card-text"><small>Stunning sunsets and unique architecture.</small></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <h2 class="  my-10 "> Deals for the Weekend</h2>
+        <section class=" d-flex gap-3">
+
+            <section class="card shadow position-ralative col-3" style="max-width: 320px">
+                <div class=" rounded-circle bg-white position-absolute text-center heart end-0 "> <i
+                        class="fa-regular fa-heart" onclick="fav()" id="favorite"></i>
+                    </div>
+                <img src="assets/images/a2be7a0b977aad2f50741443b452f55d780db91d.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class=" d-flex gap-1">
+                        <div class=" rounded-start bg-secondary p-0.5 rounded-bottom-pill ">
+                            <h6>4.0</h6>
+                        </div>
+                        <h6>Very Good</h6>
+                        <h6 class="fw-light fs-xs">160 reviews</h6>
+                    </div>
+                    <h4 class="card-title"> Seaside Serenity Villa</h4>
+                    <p class="card-text">Amalfi Coast, Italy</p>
+                    <a href="#" class="btn-solid theme-success rounded-pill fw-bolder">Getaway Deal</a>
+                    <div class="d-flex justify-content-end gap-2 w-100"><span class="fg-secondary"> per night</span>
+                        <del class="fg-secondary"> $250</del> <span class="fw-bold"> $175 </span> </div>
+
+                </div>
+            </section>
+            <section class="card shadow position-ralative col-3" style="max-width: 320px">
+                <div class=" rounded-circle bg-white position-absolute text-center heart end-0 "> <i
+                        class="fa-regular fa-heart"onclick="fav()" id="favorite"></i></div>
+                <img src="assets/images/58fa0dad8747d754fd898bdec165f844e3c3f93b.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class=" d-flex gap-1">
+                        <div class=" rounded-start bg-secondary p-0.5 rounded-bottom-pill ">
+                            <h6>4.0</h6>
+                        </div>
+                        <h6>Very Good</h6>
+                        <h6 class="fw-light fs-xs">160 reviews</h6>
+                    </div>
+                    <h4 class="card-title"> Tropical Bungalow</h4>
+                    <p class="card-text">Phuket, Thailand</p>
+                    <a href="#" class="btn-solid theme-success rounded-pill fw-bolder">Getaway Deal</a>
+                    <div class="d-flex justify-content-end gap-2 w-100"><span class="fg-secondary"> per night</span>
+                        <del class="fg-secondary"> $210</del> <span class="fw-bold"> $160 </span> </div>
+
+                </div>
+            </section>
+            <section class="card shadow position-ralative col-3" style="max-width: 320px">
+                <div class=" rounded-circle bg-white position-absolute text-center heart end-0 "> <i
+                        class="fa-regular fa-heart"onclick="fav()" id="favorite"></i></div>
+                <img src="assets/images/58fa0dad8747d754fd898bdec165f844e3c3f93b.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class=" d-flex gap-1">
+                        <div class=" rounded-start bg-secondary p-0.5 rounded-bottom-pill ">
+                            <h6>4.0</h6>
+                        </div>
+                        <h6>Very Good</h6>
+                        <h6 class="fw-light fs-xs">160 reviews</h6>
+                    </div>
+                    <h4 class="card-title"> Santorini Sunset Suites</h4>
+                    <p class="card-text">Santorini, Greece</p>
+                    <a href="#" class="btn-solid theme-success rounded-pill fw-bolder">Getaway Deal</a>
+                    <div class="d-flex justify-content-end gap-2 w-100"><span class="fg-secondary"> per night</span>
+                        <del class="fg-secondary"> $300</del> <span class="fw-bold"> $255 </span> </div>
+
+                </div>
+            </section>
+            <section class="card shadow position-ralative col-3" style="max-width: 320px">
+                <div class=" rounded-circle bg-white position-absolute text-center heart end-0 "> <i
+                        class="fa-regular fa-heart"onclick="fav()" id="favorite"></i></div>
+                <img src="assets/images/a2be7a0b977aad2f50741443b452f55d780db91d.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class=" d-flex gap-1">
+                        <div class=" rounded-start bg-secondary p-0.5 rounded-bottom-pill ">
+                            <h6>4.0</h6>
+                        </div>
+                        <h6>Very Good</h6>
+                        <h6 class="fw-light fs-xs">160 reviews</h6>
+                    </div>
+                    <h4 class="card-title"> Marbella Resort</h4>
+                    <p class="card-text">Marbella, Spain</p>
+                    <a href="#" class="btn-solid theme-success rounded-pill fw-bolder">Getaway Deal</a>
+                    <div class="d-flex justify-content-end gap-2 w-100"><span class="fg-secondary"> per night</span>
+                        <del class="fg-secondary"> $250</del> <span class="fw-bold"> $175 </span> </div>
+
+                </div>
+            </section>
+        </section>
+     
+        <section class="container">
+            <h2 class="  my-10 "> Travel more, spend less</h2>
+            <div class=" d-flex gap-3">
+                <div class=" col-3 border border-primary rounded-5 p-5">
+                    <h4> 10% discounts on stays</h4>
+                    <p> Enjoy discounts at participating <br> properties wordwide crowd</p>
+                </div>
+                <div class=" col-3 border border-primary rounded-5 p-5">
+                    <h4> Travel of season</h4>
+                    <p> Avoid peak times ans enjoy <br> lower and fever crowds</p>
+                </div>
+                <div class=" col-3 border border-primary rounded-5 p-5">
+                    <h4> Exclusive deals</h4>
+                    <p> Enjoy discounts at participating <br> properties wordwide crowd</p>
+                </div>
+                <div class=" col-3 border border-primary rounded-5 p-5">
+                    <h4> Weekend Special</h4>
+                    <p> Enjoy 12% off weekend stays </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Top Sights to See -->
+
+
+        <section class=" container">
+            <h2 class="  my-10 "> Top Sights to See</h2>
+            <div class="d-flex gap-3">
+                <div class="  position-ralative col-6  ">
+
+                    <div class=" d-flex position-absolute m-7  ">
+                        <h4 class="fg-white"> Sassnitz</h4>
+                        <div class="flag ms-3"><img src="assets/images/sassf.png" alt=""> </div>
+                    </div>
+                    <div class="rounded-5 "><img src="assets/images/sass.png" alt=""> </div>
+
+                </div>
+                <div class="  position-ralative col-6 ">
+
+                    <div class=" d-flex position-absolute m-7  ">
+                        <h4 class="fg-white"> Binz</h4>
+                        <div class="flag ms-3"><img src="assets/images/blinzf.png" alt=""> </div>
+                    </div>
+                    <div class="rounded-5 "><img src="assets/images/blinz.png" alt=""> </div>
+
+                </div>
+            </div>
+            <!-- row -->
+            <div class="d-flex gap-3">
+                <div class="  position-ralative col-4  ">
+
+                    <div class=" d-flex position-absolute m-7  ">
+                        <h4 class="fg-white"> Sagard</h4>
+                        <div class="flag ms-3"><img src="assets/images/pm1.png" alt=""> </div>
+                    </div>
+                    <div class="rounded-5 "><img src="assets/images/Country Card1.png" alt=""> </div>
+
+                </div>
+                <div class="  position-ralative col-4 ">
+
+                    <div class=" d-flex position-absolute m-7  ">
+                        <h4 class="fg-white"> Bergen</h4>
+                        <div class="flag ms-3"><img src="assets/images/pm2.png" alt=""> </div>
+                    </div>
+                    <div class="rounded-5 "><img src="assets/images/Country Card2.png" alt=""> </div>
+
+                </div>
+                <div class="  position-ralative col-4 ">
+
+                    <div class=" d-flex position-absolute m-7  ">
+                        <h4 class="fg-white"> Freedom</h4>
+                        <div class="flag ms-3"><img src="assets/images/pm3.png" alt=""> </div>
+                    </div>
+                    <div class="rounded-5 "><img src="assets/images/Country Card3.png" alt=""> </div>
+                </div>
+        </section>
+    </section>
+
+
+    <!--/////////////// sarah-sections /////////////// -->
+
+
+    <!-- samar-sections -->
+
+    <!--top things to do in barcelona-->
+    <section>
+        <h2 class="container mb-5">Top Things to Do in Barcelona</h2>
+        <div class=" container d-flex gap-5 overflow-auto mb-6  ">
+            <button class=" btn d-flex align-itmes-center gap-5  border-black fg-white bg-black rounded-pill">
+                <i class="fa-solid fa-chess-rook"></i>
+                Explore
+            </button>
+            <button class=" btn d-flex align-itmes-center gap-5 link  rounded-pill">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                Beach
+            </button>
+            <button class=" btn d-flex align-itmes-center gap-5 link  rounded-pill">
+                <i class="fa-solid fa-landmark"></i>
+                museum
+            </button>
+            <button class=" btn d-flex align-itmes-center gap-5 link  rounded-pill">
+                <i class="fa-solid fa-masks-theater"></i>
+                Show
+            </button>
+            <button class=" btn d-flex align-itmes-center gap-5 link  rounded-pill">
+                <i class="fa-solid fa-utensils"></i>
+                Food
+            </button>
+            <button class=" btn d-flex align-itmes-center gap-5 link  rounded-pill">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Night Life
+            </button>
+
+
+        </div>
+        <div class=" container d-flex gap-5 g-3 mt-2 ">
+
+
+            <div class="card border-0 text-start bg-transparent">
+                <img class="rounded-5 object-fit-cover" src="assets/images/Pic.png" alt="Sagrada Familia">
+                <h5>Sagrada Familia</h5>
+
+            </div>
+
+
+
+            <div class="card border-0 text-start bg-transparent">
+                <img class="rounded-5 object-fit-cover" src="assets/images/Pic (1).png" alt="Park Güell">
+                <h5>Park Güell</h5>
+
+            </div>
+            <div class="card border-0 text-start bg-transparent">
+                <img class="rounded-5 object-fit-cover" src="assets/images/Pic (2).png" alt="Casa Milà">
+                <h5>Casa Milà</h5>
+
+            </div>
+            <div class="card border-0 text-start bg-transparent">
+                <img class="rounded-5 object-fit-cover" src="assets/images/Pic (3).png" alt="Sacred Heart Temple">
+                <h5>Sacred Heart Temple</h5>
+
+            </div>
+            <div class="card border-0 text-start bg-transparent">
+                <img class="rounded-5 object-fit-cover" src="assets/images/Pic (4).png" alt="Arc de Triomf">
+                <h5>Arc de Triomf</h5>
+
+            </div>
+            <div class="card border-0 text-start bg-transparent">
+                <img class="rounded-5 object-fit-cover" src="assets/images/Pic (5).png" alt="Casa Batlló">
+                <h5>Casa Batlló</h5>
+
+            </div>
+            <!--    
+                 -->
+        </div>
+    </section class="white">
+
+
+
+
+
+    <!--explore tripto in motion-->
+
+
+    <section class="container col-12  ">
+        <div class="back-gray w-100">
+            <h2 class="mb-7 mt-6 ps-11">Explore Tripto in Motion</h2>
+            <div class="row">
+                <div class="col-8 ps-11">
+                    <div class="text-white card rounded-5 overflow-hidden d-flex position-relative">
+                        <img class="w-100 big-img" src="assets/images/91e8626e5a593060148a8acef8c21355f9e55764.jpg">
+                        <div class="position-absolute top-0 d-flex h-100 flex-column justify-content-center">
+                            <div class="position-relative z-1 justify-content-center">
+
+                                <h1 class="ps-12 fg-white">Step into a World <br>of Lixury</h1>
+                                <h5 class="ps-12 fg-white">immerse toyeself in captivating visuals from our mist iconic
+                                    and
+                                    <br> indulgent destinations.
+                                </h5>
+                                <div class="d-inline-block ps-12 mt-3">
+                                    <a href="#Explore All Videos"
+                                        class="btn btn-primary rounded-pill  text-decoration-none border-primary bg-primary">Explore
+                                        All
+                                        Videos</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-2 ">
+                    <div class=" card rounded-5 overflow-hidden position-relative mb-5">
+                        <img class="photo w-100 h-100 object-fit-cover rounded-5"
+                            src="assets/images/a91cd2c7c3702c61762e7159f01d3ae0f20de318.jpg">
+                        <div class="position-absolute top-0 d-flex w-100 h-100 flex-column justify-content-center">
+
+                            <i class="fa-solid fa-circle-play fs-4 mb-1 icon"></i>
+                            <span class="fw-semibold small fg-white ps-5">Maldives, Asia</span>
+                            <div class="text-warning small  star ps-5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class=" card rounded-5 overflow-hidden position-relative mb-5">
+                        <img class="photo w-100 h-100 object-fit-cover rounded-5"
+                            src="assets/images/9bbd006f5b46ac2e80add012949d35f705231bfe.jpg">
+                        <div class="position-absolute top-0 d-flex w-100 h-100 flex-column justify-content-center">
+
+                            <i class="fa-solid fa-circle-play fs-4 mb-1 icon"></i>
+                            <span class="fw-semibold small fg-white ps-5">Phuket, Thailand</span>
+                            <div class="text-warning small  star ps-5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class=" card rounded-5 overflow-hidden position-relative mb-5">
+                        <img class="photo w-100 h-100 object-fit-cover rounded-5"
+                            src="assets/images/bccec5bf1e1e3e4e50b868ea8d01c70c5c1f391a.jpg">
+                        <div class="position-absolute top-0 d-flex w-100 h-100 flex-column justify-content-center">
+
+                            <i class="fa-solid fa-circle-play fs-4 mb-1 icon"></i>
+                            <span class="fw-semibold small fg-white ps-5">Maui, Hawaii, USA</span>
+                            <div class="text-warning small ps-5 star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+    </section>
+    <!--Homes Guests Love-->
+    <section class="container px-5 ">
+        <div class="me-3">
+            <div class="d-flex justify-content-between ">
+                <h2 class="mb-5">Homes Guests Love</h2>
+                <div class="mt-5">
+                    <button class="rounded-circle opacity-50 ">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="rounded-circle ">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="row g-0">
+                <div class="col-3 ">
+                    <div class="card rounded-4 border overflow-hidden  width-card">
+                        <div class="position-relative">
+                            <img class="w-100" src="assets/images/a2be7a0b977aad2f50741443b452f55d780db91d.jpg"
+                                alt="Azure Horizon Hotel">
+                            <button class="position-absolute btn rounded-circle top-0 d-flex heart">
+                                <i class="fa-regular fa-heart "onclick="fav()" id="favorite"></i>
+                            </button>
+
+                        </div>
+                        <div>
+                            <div class="d-flex align-itmes-center gap-3 ms-4 mt-3">
+                                <span class="fg-primary nimber">5.0</span>
+                                <span class="fg-primary">Excellent</span>
+                                <span>350 reviews</span>
+
+                            </div>
+                            <div>
+                                <h3 class="ms-4">Azure Horizon Hotel</h3>
+                                <p class="ms-4">Nice, France</p>
+                            </div>
+                            <div class="d-flex justify-content-end ">
+                                <span class="me-3"> per night</span>
+                                <h4 class="me-5 ">$165</h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="card rounded-4 border overflow-hidden width-card">
+                        <div class="position-relative">
+                            <img class="w-100" src="assets/images/a2be7a0b977aad2f50741443b452f55d780db91d.jpg"
+                                alt="Azure Horizon Hotel">
+                            <button class="position-absolute btn rounded-circle top-0 d-flex heart">
+                                <i class="fa-regular fa-heart "onclick="fav()" id="favorite"></i>
+                            </button>
+
+                        </div>
+                        <div>
+                            <div class="d-flex align-itmes-center gap-3 ms-4 mt-3">
+                                <span class="fg-primary nimber">5.0</span>
+                                <span class="fg-primary">Excellent</span>
+                                <span>350 reviews</span>
+
+                            </div>
+                            <div>
+                                <h3 class="ms-4">Azure Horizon Hotel</h3>
+                                <p class="ms-4">Nice, France</p>
+                            </div>
+                            <div class="d-flex justify-content-end ">
+                                <span class="me-3"> per night</span>
+                                <h4 class="me-5 ">$165</h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <div class="card rounded-4 border overflow-hidden  width-card">
+                        <div class="position-relative">
+                            <img class="w-100" src="assets/images/a2be7a0b977aad2f50741443b452f55d780db91d.jpg"
+                                alt="Azure Horizon Hotel">
+                            <button class="position-absolute btn rounded-circle top-0 d-flex heart">
+                                <i class="fa-regular fa-heart "onclick="fav()" id="favorite"></i>
+                            </button>
+
+                        </div>
+                        <div>
+                            <div class="d-flex align-itmes-center gap-3 ms-4 mt-3">
+                                <span class="fg-primary nimber">5.0</span>
+                                <span class="fg-primary">Excellent</span>
+                                <span>350 reviews</span>
+
+                            </div>
+                            <div>
+                                <h3 class="ms-4">Azure Horizon Hotel</h3>
+                                <p class="ms-4">Nice, France</p>
+                            </div>
+                            <div class="d-flex justify-content-end ">
+                                <span class="me-3"> per night</span>
+                                <h4 class="me-5 ">$165</h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-3">
+                    <div class="card rounded-4 border overflow-hidden width-card">
+                        <div class="position-relative">
+                            <img class="w-100" src="assets/images/a2be7a0b977aad2f50741443b452f55d780db91d.jpg"
+                                alt="Azure Horizon Hotel">
+                            <button class="position-absolute btn rounded-circle top-0 d-flex heart">
+                                <i class="fa-regular fa-heart "onclick="fav()" id="favorite"></i>
+                            </button>
+
+                        </div>
+                        <div>
+                            <div class="d-flex align-itmes-center gap-3 ms-4 mt-3">
+                                <span class="fg-primary nimber">5.0</span>
+                                <span class="fg-primary">Excellent</span>
+                                <span>350 reviews</span>
+
+                            </div>
+                            <div>
+                                <h3 class="ms-4">Azure Horizon Hotel</h3>
+                                <p class="ms-4">Nice, France</p>
+                            </div>
+                            <div class="d-flex justify-content-end ">
+                                <span class="me-3"> per night</span>
+                                <h4 class="me-5 ">$165</h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <!--Let`s see what-->
+    <section class="container text-center my-5">
+        <div class="back-gray">
+            <p class="text-muted my-5">Let`s see what people think of tripto</p>
+            <div class="d-flex justify-content-center">
+                <div class="position-relative">
+
+                    <img class="rounded-circle my-5 box-blue"
+                        src="assets/images/f495179ce71eca1719d791646fd4a58037178c7f.jpg" alt="pro">
+
+                    <img class="rounded-circle blue  position-absolute "
+                        src="assets/images/a33df0aadb8ab4dcee7d33653473e494ab6ea71a.jpg" alt="">
+                    <img class="rounded-circle pink position-absolute "
+                        src="assets/images/a33df0aadb8ab4dcee7d33653473e494ab6ea71a.jpg" alt="">
+                    <img class="rounded-circle yellow position-absolute "
+                        src="assets/images/ceeea08c9d56a6f2049db97c62b26db93e129d51.jpg" alt="">
+                    <img class="rounded-circle green position-absolute"
+                        src="assets/images/ceeea08c9d56a6f2049db97c62b26db93e129d51.jpg" alt="">
+                    <img class="rounded-circle peru position-absolute"
+                        src="assets/images/f495179ce71eca1719d791646fd4a58037178c7f.jpg" alt="">
+
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center align-items-start gap-4 my-5">
+
+                <i class="fas fa-quote-left text-primary  color-icon fa-3x"></i>
+
+                <h4 class="mb-0">
+                    This place is exactly like the picture posted on Tripto.<br>
+                    Great service, we had a great stay!
+                </h4>
+
+                <i class="fas fa-quote-right text-primary  color-icon fa-3x align-self-end"></i>
+
+            </div>
+            <div>
+                <h3 class="my-5">Ethan Rogrinho</h3>
+                <p class="my-5 "> Malaysia</p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!-- /////////////samar-sections///////// -->
+
+
+
+
+
+    <!-- /////////////footer ////////////// -->
+    <footer class="bg-black fg-white pt-12 pb-7 col-12 md:col-12">
+        <div class="container">
+
+            <div class="row gy-7">
+
+                <!-- Brand -->
+                <div class="col-12 lg:col-4">
+                    <a href="/" class="logo footer-logo d-inline-block text-decoration-none mb-5"
+                        aria-label="Tripto home">
+                        Tripto<span class="logo-dot d-inline-block"></span>
+                    </a>
+                    <p class="small mb-7">
+                        We help you find and book the perfect stay from cozy guesthouses to top hotels-with ease, trust,
+                        and the best deals.
+                    </p>
+
+                    <h6 class="fg-info fw-semibold mb-5">Download Our App</h6>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#"
+                            class="btn-solid fg-secondary theme-secondary d-flex align-items-center gap-3 text-start text-decoration-none">
+                            <i class="fa-brands fa-apple fs-xl fg-black"></i>
+                            <span class="lh-1">
+                                <small class="d-block fg-black">Download on the</small>
+                                <span class="fw-semibold fg-black">App Store</span>
+                            </span>
+                        </a>
+                        <a href="#"
+                            class="btn-solid theme-secondary d-flex align-items-center gap-3 text-start text-decoration-none">
+                            <i class="fa-brands fa-google-play fs-xl fg-black"></i>
+                            <span class="lh-1">
+                                <small class="d-block fg-black">GET IT ON</small>
+                                <span class="fw-semibold fg-black">Google Play</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explore -->
+                <div class="col-6 md:col-3 lg:col-2 lg:offset-1">
+                    <h6 class="fg-info fw-semibold mb-5">Explore</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none">Trending Destinations</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Summer Hotspots</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Winter Getaways</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Weekend Deals</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Family-Friendly Stays</a></li>
+                    </ul>
+                </div>
+
+                <!-- Property Types -->
+                <div class="col-6 md:col-3 lg:col-2">
+                    <h6 class="fg-info fw-semibold mb-5">Property Types</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none">Hotels</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Apartments</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Villas</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Cabins</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Glamping</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Domes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 md:col-3 lg:col-2">
+                    <h6 class="fg-info fw-semibold mb-5">Support</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-0">
+                        <li><a href="#" class="fg-white text-decoration-none">Help Centre</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Live Chat Support</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="fg-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="col-6 md:col-3 lg:col-2">
+                    <h6 class="fg-info fw-semibold mb-5">Get In Touch</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-5 small mb-5">
+                        <li><a href="tel:+18001234567" class="text-white text-decoration-none">+1 (800) 123-456</a></li>
+                        <li><a href="mailto:support@tripto.com"
+                                class="text-white text-decoration-none">support@tripto.com</a></li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Facebook"><i
+                                class="fa-brands fg-black fa-facebook-f"></i></a>
+                        <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Instagram"><i
+                                class="fa-brands fg-black fa-instagram"></i></a>
+                        <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="YouTube"><i
+                                class="fa-brands fg-black fa-youtube"></i></a>
+                        <a href="#" class="btn-solid  theme-secondary btn-icon btn-xs" aria-label="Twitter"><i
+                                class="fa-brands fg-black fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-7">
+
+            <!-- Bottom bar -->
+            <div class="d-flex flex-column md:flex-row justify-content-between align-items-center gap-5">
+                <small>© 2025 Tripto. All rights reserved.</small>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-cc-visa fs-xl"></i></span>
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-cc-diners-club fs-xl"></i></span>
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-cc-mastercard fs-xl"></i></span>
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-cc-stripe fs-xl"></i></span>
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-cc-paypal fs-xl"></i></span>
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-google-pay fs-xl"></i></span>
+                    <span class="bg-white text-dark rounded-3 px-3 d-inline-flex align-items-center"><i
+                            class="fa-brands fg-black fa-apple-pay fs-xl"></i></span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

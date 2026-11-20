@@ -1,18 +1,13 @@
 /* ahmed-home */
-
-
-
-
- 
       
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@500;600&display=swap");
-/* Header */
+
 .site-header {
   border-bottom: 1px solid #eee;
   font-family: "Inter", system-ui, sans-serif;
 }
 
-/* Logo */
+
 .logo {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -35,7 +30,7 @@
   vertical-align: -0.1em;
 }
 
-/* Language / currency */
+
 .lang-btn {
   font-size: 0.8rem;
   font-weight: 600;
@@ -46,7 +41,7 @@
   color: #0b5cff;
 }
 
-/* Support icon */
+
 .support-btn {
   font-size: 1.35rem;
   line-height: 1;
@@ -57,7 +52,7 @@
   color: #0848cc;
 }
 
-/* Login */
+
 .btn-login {
   padding: 0.55rem 1.6rem;
   font-size: 0.85rem;
@@ -74,7 +69,6 @@
   background: #0848cc;
 }
 
-/* Mobile */
 @media (max-width: 575.98px) {
   .logo {
     font-size: 1.55rem;
@@ -87,7 +81,7 @@
 
    
 
-/* hero */
+
 
 .hero-nav{
   background: linear-gradient(to bottom, #000000,#afafaf8b );
@@ -96,11 +90,11 @@
 
 
 .hero-section{
-  background-image: url(../sections/images/hero.png);
+  background-image: url(assets/images/hero.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* height: 100vh; */
+  
 }
 .nav-link:hover, .nav-link:focus {
   color: black;
@@ -262,7 +256,7 @@ body{
 
 /* sarah-home  */
 .trust-tripto {
-  background-image: url(../sections/images/Full\ Frame.png);
+  background-image: url(assets/images/Full\ Frame.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 

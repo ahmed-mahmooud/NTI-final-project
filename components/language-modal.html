@@ -7,9 +7,410 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .language-tabs {
+    border-bottom: 0;
+}
+
+.language-tabs .nav-link {
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    color: #6b7280;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    margin-right: 1.5rem;
+}
+
+.language-tabs .nav-link.active {
+    border-bottom-color: #1a56db;
+    color: #1f2937;
+}
+
+.translation-box {
+    background-color: #f3f4f6;
+}
+
+.dialog-option {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #1f2937;
+    text-align: left;
+}
+
+.dialog-option:hover {
+    background-color: #f3f4f6;
+}
+
+.dialog-option.active {
+    background-color: #fff;
+    border-color: #1a56db;
+    color: #1a56db;
+}
+    </style>
 </head>
 <body>
     
+    <dialog class="dialog dialog-scrollable" id="languageDialog">
+    <div class="dialog-header">
+        <h2 class="dialog-title visually-hidden">Language &amp; currency</h2>
+
+        <ul class="language-tabs nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link active" id="languages-tab" data-bs-toggle="tab"
+                    data-bs-target="#languages-pane" role="tab" aria-controls="languages-pane"
+                    aria-selected="true">Languages</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button type="button" class="nav-link" id="currency-tab" data-bs-toggle="tab"
+                    data-bs-target="#currency-pane" role="tab" aria-controls="currency-pane"
+                    aria-selected="false">Currency</button>
+            </li>
+        </ul>
+
+        <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+    </div>
+
+    <div class="dialog-body">
+        <div class="tab-content">
+
+            <div class="tab-pane show active" id="languages-pane" role="tabpanel" aria-labelledby="languages-tab"
+                tabindex="0">
+
+                <div class="translation-box d-flex align-items-center justify-content-between rounded-3 p-4 mb-5">
+                    <div>
+                        <p class="fw-semibold small mb-1">
+                            Translation <i class="fa-solid fa-language ms-1"></i>
+                        </p>
+                        <small class="text-secondary">Automatically translate descriptions and reviews into English.</small>
+                    </div>
+                    <div class="switch theme-primary ms-4">
+                        <input type="checkbox" value="" id="translationSwitch" role="switch" switch checked>
+                    </div>
+                </div>
+
+                <h3 class="fs-6 fw-semibold mb-4">Choose a language</h3>
+
+                <div class="row gy-2">
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option active d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/us.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>English (US)</span>
+                            <i class="fa-solid fa-check ms-auto"></i>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>English (UK)</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/de.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Deutsch</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/nl.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Nederlands</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Français</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/es.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Español</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/ar.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Español (AR)</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/mx.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Español (MX)</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/it.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Italiano</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/pt.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Português (PT)</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/br.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Português (BR)</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/no.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Norsk</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/fi.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Suomi</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/se.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Svenska</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/dk.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Dansk</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/cz.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Čeština</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/hu.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Magyar</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/ro.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Română</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/jp.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>日本語</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/cn.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>简体中文</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/tw.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>繁體中文</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/uz.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>O'zbekcha</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/pl.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Polski</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/gr.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Ελληνικά</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/ru.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Русский</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/tr.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Türkçe</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/bg.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Български</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>العربية</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/kr.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>한국어</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/il.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>עברית</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/lv.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Latviski</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/ua.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Українська</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/in.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>हिन्दी</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/id.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Bahasa Indonesia</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/my.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Bahasa Malaysia</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/th.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>ภาษาไทย</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/ee.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Eesti</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/hr.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Hrvatski</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/lt.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Lietuvių</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/si.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Slovenščina</span>
+                        </button>
+                    </div>
+
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/rs.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Srpski</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/vn.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Tiếng Việt</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/is.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Íslenska</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <img src="https://flagcdn.com/w40/ph.png" alt="" width="18" height="18" class="rounded-circle object-fit-cover">
+                            <span>Filipino</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="currency-pane" role="tabpanel" aria-labelledby="currency-tab" tabindex="0">
+                <h3 class="fs-6 fw-semibold mb-4">Choose a currency</h3>
+
+                <div class="row gy-2">
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option active d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <span>USD</span>
+                            <i class="fa-solid fa-check ms-auto"></i>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <span>EUR</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <span>GBP</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <span>EGP</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <span>SAR</span>
+                        </button>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <button type="button" class="dialog-option d-flex align-items-center gap-2 w-100 rounded-3 p-2 small">
+                            <span>AED</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</dialog>
 
 
 

@@ -115,4 +115,22 @@
 
  footer {
    background: #121316;
- }
+ } 
+ 
+ .trips-wishlist-btn{
+    background-color: #fff;
+    color: #121212;
+    padding: 8px 20px;
+    border: 2px solid #989696;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+} 
+i{
+    font-size: 20px; 
+    margin-right: 5px;
+}
+
+
+
+

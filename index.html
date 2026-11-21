@@ -512,71 +512,79 @@
         </div>
     </dialog>
 
-    
-   
 
 
-<!-- Login Modal -->
 
-<dialog class="dialog" id="loginDialog" aria-labelledby="loginTitle">
-  <div class="dialog-header d-flex align-items-center justify-content-between">
-    <button type="button" class="btn btn-link text-dark p-0 invisible" id="backBtn" aria-label="Back">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-    <h2 class="dialog-title fs-6 fw-semibold m-0" id="loginTitle">Log in or sign up</h2>
-    <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="dialog" aria-label="Close"></button>
-  </div>
 
-  <div class="dialog-body">
-    <!-- Step 1: Login -->
-    <div id="stepLogin">
-      <h3 class="fs-4 fw-bold text-center my-4">Welcome to Tripto</h3>
+    <!-- Login Modal -->
 
-      <label for="email" class="form-label fw-medium">Email address</label>
-      <input type="email" class="form-control mb-3" id="email"
-             value="emmily.morgan@gmail.com" placeholder="Enter your email address" required>
-
-      <button type="button" class="btn theme-primary fg-white bg-primary w-100 mb-3" id="continueBtn">
-        <span class="spinner-border spinner-border-sm d-none" id="continueSpinner" aria-hidden="true"></span>
-        Continue
-      </button>
-
-      <div class="d-flex align-items-center gap-3 text-secondary mb-3">
-        <hr class="flex-grow-1 m-0"> or <hr class="flex-grow-1 m-0">
-      </div>
-
-      <button type="button" class="btn btn-outline-secondary w-100 mb-2"><i class="fa-brands fa-google me-2"></i>Continue with Google</button>
-      <button type="button" class="btn btn-outline-secondary w-100 mb-2"><i class="fa-brands fa-apple me-2"></i>Continue with Apple</button>
-      <button type="button" class="btn btn-outline-secondary w-100"><i class="fa-brands fa-facebook me-2"></i>Continue with Facebook</button>
-    </div>
-
-    <!-- Step 2: Verification -->
-    <div id="stepVerify" class="d-none text-center">
-      <p class="my-4">Enter verification code has sent <strong id="shownEmail"></strong></p>
-
-      <div class="d-flex justify-content-center mb-2">
-        <div class="otp" data-bs-otp id="otp">
-          <input type="text" class="otp-input" id="otpCode" maxlength="4" inputmode="numeric"
-                 value="0000" aria-label="Verification code">
+    <dialog class="dialog" id="loginDialog" aria-labelledby="loginTitle">
+        <div class="dialog-header d-flex align-items-center justify-content-between">
+            <button type="button" class="btn btn-link text-dark p-0 invisible" id="backBtn" aria-label="Back">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <h2 class="dialog-title fs-6 fw-semibold m-0" id="loginTitle">Log in or sign up</h2>
+            <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="dialog" aria-label="Close"></button>
         </div>
-      </div>
-      <div class="text-danger small mb-2 d-none" id="otpError" role="alert">Invalid code, please try again.</div>
-      <div class="text-success small mb-2 d-none" id="otpSuccess" role="status">Code accepted (demo only, no real verification).</div>
 
-      <button type="button" class="btn btn-primary w-100 my-3" id="verifyBtn">
-        <span class="spinner-border spinner-border-sm d-none" id="verifySpinner" aria-hidden="true"></span>
-        Verify email
-      </button>
+        <div class="dialog-body">
 
-      <p class="small text-secondary mb-2">
-        Didn't receive email? Check your spam folder or request another code
-        <span id="timerText">in <span id="sec">58</span> seconds</span>
-        <button type="button" class="btn btn-link btn-sm p-0 align-baseline d-none" id="resendBtn">Resend code</button>
-      </p>
-      <button type="button" class="btn btn-link" id="editEmail">Edit Email</button>
-    </div>
-  </div>
-</dialog>
+            <div id="stepLogin">
+                <h3 class="fs-4 fw-bold text-center my-4">Welcome to Tripto</h3>
+
+                <label for="email" class="form-label fw-medium">Email address</label>
+                <input type="email" class="form-control mb-3" id="email" value="emmily.morgan@gmail.com"
+                    placeholder="Enter your email address" required>
+
+                <button type="button" class="btn theme-primary fg-white bg-primary w-100 mb-3" id="continueBtn">
+                    <span class="spinner-border spinner-border-sm d-none" id="continueSpinner"
+                        aria-hidden="true"></span>
+                    Continue
+                </button>
+
+                <div class="d-flex align-items-center gap-3 text-secondary mb-3">
+                    <hr class="flex-grow-1 m-0"> or
+                    <hr class="flex-grow-1 m-0">
+                </div>
+
+                <button type="button" class="btn btn-outline-secondary w-100 mb-2"><i
+                        class="fa-brands fa-google me-2"></i>Continue with Google</button>
+                <button type="button" class="btn btn-outline-secondary w-100 mb-2"><i
+                        class="fa-brands fa-apple me-2"></i>Continue with Apple</button>
+                <button type="button" class="btn btn-outline-secondary w-100"><i
+                        class="fa-brands fa-facebook me-2"></i>Continue with Facebook</button>
+            </div>
+
+
+            <div id="stepVerify" class="d-none text-center">
+                <p class="my-4">Enter verification code has sent <strong id="shownEmail"></strong></p>
+
+                <div class="d-flex justify-content-center mb-2">
+                    <div class="otp" data-bs-otp id="otp">
+                        <input type="text" class="otp-input" id="otpCode" maxlength="4" inputmode="numeric" value="0000"
+                            aria-label="Verification code">
+                    </div>
+                </div>
+                <div class="text-danger small mb-2 d-none" id="otpError" role="alert">Invalid code, please try again.
+                </div>
+                <div class="text-success small mb-2 d-none" id="otpSuccess" role="status">Code accepted (demo only, no
+                    real verification).</div>
+
+                <button type="button" class="btn btn-primary w-100 my-3" id="verifyBtn">
+                    <span class="spinner-border spinner-border-sm d-none" id="verifySpinner" aria-hidden="true"></span>
+                    Verify email
+                </button>
+
+                <p class="small text-secondary mb-2">
+                    Didn't receive email? Check your spam folder or request another code
+                    <span id="timerText">in <span id="sec">58</span> seconds</span>
+                    <button type="button" class="btn btn-link btn-sm p-0 align-baseline d-none" id="resendBtn">Resend
+                        code</button>
+                </p>
+                <button type="button" class="btn btn-link" id="editEmail">Edit Email</button>
+            </div>
+        </div>
+    </dialog>
 
 
 
